@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buchstaben</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Times New Roman', Times, serif;
+      background: #fffdf6;
+      color: #333;
+      line-height: 1.8;
+      font-size: 20px;
+      overflow-x: hidden;
+    }
+    section {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .line {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+    .line.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div id="password-screen" style="text-align:center;padding-top:30vh;">
+    <h2>Nhập mật khẩu để đọc thư</h2>
+    <input type="password" id="password" placeholder="Mật khẩu">
+    <button onclick="checkPassword()">Mở thư</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+  <section id="letter" style="display:none; text-align:justify;">
+    <p style="color:red;">Úi! Đúng là trai đẹp mới biết mật khẩu</p>
+    <p style="color:red;">&#8595;</p>  
+    <div class="line">----------------------------------------</div>
+    <div class="line">
+    <p style="color:red;">Cảnh báo 1 !!!!<br>
+    Chỉ đọc được 1 lần<br>
+    Chỉ có thể lướt xuống</p>
+    <p style="color:red;">Cảnh báo 2 !!!!<br>
+    Nó rất dài lê thê<br>
+    Đủ đọc được mấy ngày</p>
+    <p style="color:red;">Cảnh báo 3 !!!!<br>
+    Đọc trong lặng thinh<br>
+    Rep qua tin nhắn chủ thớt ngại</p>
+    <p style="color:red;">Cảnh báo cuối!!!!<br>
+    Giả vờ không thấy lỗi chính tả<br>
+    Tương tự đối với các lỗi khác</p>
+    <p style="color:rgb(146, 16, 105);">Chúc vui vẻ</p>
+    <div class="line">----------------------------------------</div>
+    </div>
+    <br>
+    <div class="line">Lieber Duy,</div>
+    <br>
+
+Lieber Duy,
+Loan schreibt dir heute auf Deutsch – einfach so, damit du ein bisschen üben kannst.<br>
+
+Fühlst du dich im Moment vielleicht ein bisschen verwirrt, unsicher, mit tausend Gefühlen, die du nicht alle mit anderen teilen kannst?<br>
+
+Das neue Leben, das vor dir liegt, ist spannend, aber macht vielleicht auch ein bisschen Angst. Diese Phase ist voller Fragezeichen.<br> 
+
+Dein Inneres ist so durcheinander wie ungekochte deutsche Nudeln.
+Dieses komische Schwebezustand-Gefühl… das haben sogar Leute, die schon zehnmal nach Europa gezogen sind. Also keine Sorge!<br>
+
+Sobald du aus dem Flugzeug steigst und Deutschlandluft atmest (ja, die mit dem Bratwurst-Duft), wird alles klick machen – wie bei Lego.
+Kach! Und du bist drin im Game. <br>
+
+Natürlich wirst du mal die falsche Bahn nehmen, dein Passwort vergessen oder im Supermarkt stehen und nicht wissen, was „Quark“ ist. Aber come on – wenn jemand das alles überleben kann, dann ja wohl du.
+Du – der charmante, smarte Typ mit einem Lächeln, das sogar deutsche Bürokratie ein bisschen weicher macht. <br>
+
+Es wird Tage geben, an denen alles neu, aufregend und mega cool ist. Und dann gibt’s Tage, an denen du einfach nur Nudeln mit Ketchup isst und ein bisschen Heimweh hast. Und dann denkst du an mic, die dich aus der Ferne feiert und dir heimlich Memes schickt. <br>
+
+Du wirst neue Leute treffen, neue Wörter lernen, auch die, die nicht im Wörterbuch stehen, und langsam wirst du merken:
+„Hey, ich pack das. Ich gehör hierher.“ <br>
+
+Du wirst neue Inspiration finden, ein positives Lebensumfeld – und Chancen, genau so zu strahlen, wie du es verdient hast.<br>
+
+Du wirst okay sein. Nein – du wirst besser als okay sein.<br>
+
+Ich bin hier, unterstütze dich immer – aus der Ferne. Wenn du mich brauchst, schreib mir einfach. Egal, ob mitten in der Nacht oder früh am Morgen.<br>
+
+Ich bin hier – always. <br>
+Wenn du mal jemanden brauchst – nachts um 3 oder morgens um 6 – schreib mir. Ich bin da. (Oder ich schlaf, aber ich antworte danach. Versprochen.) <br>
+
+Und hey – vergiss nicht, manchmal ein kleines bisschen an mich zu denken. <br>
+
+Alles Liebe und eine gute Reise! <br>
+- Loan - <br>
+<div class="line">----------------------------------------</div>
+<br>
+</div>
+    <div class="line">Màn dạo đầu thôi</div>
+    <div class="line">Chuẩn bị tinh thần đi</div>
+    <div class="line">Đây không phải là một bức thư bình thường</div>
+    <div class="line">Mà là một quyển tuyển tập nhỏ</div>
+    <div class="line">Là cánh cửa mời Duy vào ngôi nhà của Loan</div>
+    <div class="line">Với Loan đó là một bước tiến mới</div>
+    <div class="line">Nói lên những điều chưa nói</div>
+    <div class="line">Loan có nhiều về Duy vẫn rất mơ hồ</div>
+    <div class="line">Đơn giản mà nói thì là</div>
+    <div class="line">Tưởng tượng một cánh đồng đầy lũ dê đang gặm cỏ</div>
+    <div class="line">Mỗi con gặm một nơi, trắng xóa cả cánh đồng</div>
+    <div class="line">Mỗi con dê là những suy nghĩ trong Loan</div>
+    <div class="line">Giờ đây Loan lùa nó về</div>
+    <div class="line">Để từng con bước qua cửa ngỏ</div>
+    <div class="line">Rồi cho Duy ngồi đếm từng con</div>
+    <div class="line">----------------------------------------</div>
+
+    <br>
+    <br>
+    <br>
+    <div class="line">Duy Duy</div>
+    <div class="line">Một chiếc cốc thủy tinh, nó cứng cáp, nó là chất rắn, nhưng lại dễ vỡ... Vậy nó mạnh mẽ hay là yếu đuối?</div>
+    <div class="line">Loan bây giờ đang ở một không gian bù mịt, nơi có bụi mịt mù, mọi thứ mơ hồ đầy những màng tơ bủa tủa lơ lửng khắp nơi. Nhưng không gian đó lại trống rỗng không có một thứ gì. Chậm lại, hít vào một hơi sâu, lại thấy nó nghiêng nghiêng ngả ngả, tiếng thủy tinh vỡ cọ xát vào nhau tạo ra một âm thanh sào sạt đanh thép.</div>
+    <div class="line">Đó là tâm trí của Loan, nó rất rỗng, rối rắm và dường như ngăn cách với mọi thứ đi vào đó. Loan muốn nói, thứ lỗi cho Loan! Vì Loan biết làm bạn với Loan là một sự thiệt thòi, khi Loan dường như là một người bạn khép mình đến chẳng màng xung quanh.</div>
+    <br>
+    <div class="line">Duy Duy</div>
+    <div class="line">Loan đang viết những dòng này cho Duy một cách bộc phát, không suy nghĩ, không cảm nhận.</div>
+    <div class="line">Nói nôm na là trống rỗng.</div>
+    <br>
+    <div class="line">Nên bắt đầu từ đâu</div>
+    <div class="line">Loan cũng không biết nói gì nữa</div>
+    <div class="line">Có nhiều thứ muốn nói</div>
+    <div class="line">Cũng không biết có phải là điều muốn nói không nữa</div>
+    <div class="line">Nên bắt đầu từ đâu từ đâu đâu đâu</div>
+    <br>
+    <div class="line">Dạo này, Duy đối với Loan có một khoảng xa cách kỳ lạ</div>
+    <div class="line">Tụi mình kể cho nhau nhiểu câu chuyện </div>
+    <div class="line">Rõ ràng là vẫn rất gần gũi</div>
+    <div class="line">Nhưng lại xa cách </div>
+    <div class="line">Có đôi lúc, Duy như người bạn tạo content vậy</div>
+    <div class="line">Đi với Duy lúc nào Duy cũng là người tìm kiếm chủ đề</div>
+    <div class="line">Loan cũng không biết là từ khi nào nữa, mặc dù ... </div>
+    <div class="line">Tụi mình vẫn như ngày trước nói đủ thứ chuyện trên đời</div>
+    <br>
+    <div class="line">Chỉ là</div>
+    <div class="line">Duy dường như đang tạo ra một vỏ bọc bên ngoài</div>
+    <div class="line">Che giấu đi những tâm sự bên trong mình</div>
+    <div class="line">Đây lại là một giai đoạn rất quan trọng đối với Duy</div>
+    <br>
+    <div class="line">Đã nhiều lần Duy cho Loan những gợi ý</div>
+    <div class="line">Nhưng Loan cứ vô tình để nó vụt qua hết tháy</div>
+    <div class="line">Mà Loan lại không biết cách chạm vào nó</div>
+    <div class="line">Không đúng, chính Loan cũng không biết được những cảm nhận đó có thực sự hiện hữu không nữa</div>
+    <br>
+    <div class="line">Mà nói ra, người tạo ra màng ngăn cách</div>
+    <div class="line">Người không mở lòng là Loan mới đúng</div>
+    <div class="line">Có những lúc, Loan cứ như đang nhìn vào gương khi đối diện với Duy </div>
+    <div class="line">Có rất nhiều điểm chung và đồng điệu giữa hai đứa</div>
+    <br>
+    <div class="line">Bây giờ Loan sẽ cho Duy chọt vào trung tâm mê trận</div>
+    <br>
+    <div class="line">Từ nhỏ Loan lớn lên trong roi và vọt</div>
+    <div class="line">Quả thật Loan nên người là nhờ nó</div>
+    <div class="line">Nhưng cũng không hẳn là nhờ nó</div>
+    <div class="line">Ba Loan là người dạy bằng roi</div>
+    <br>
+    <div class="line">Ngày xửa ngày xưa, cả nhà Loan sống trong một căn nhà thuê bằng gỗ, quanh quanh là một sân đất trống. Chủ nhà sống ở căn sát ngay bên cạnh. Nhà Loan nghèo rớt mồng tơi, ba Loan nợ nần. Ba Loan là người quản giáo mọi thứ trong nhà, mẹ Loan hồi đó hiền lắm, một mình tự mở tiệm may rồi kiếm ăn nhờ nó. Ba là người dạy con, dạy vợ. Loan với chị cũng quen cảnh ba đánh mẹ, hai đứa chỉ biết trố mắt cuốm nhau chạy vào giường mà chùm chăn trốn. Căn nhà cũng được ba Loan dạy bảo nốt, mỗi trận như vậy, không bể kính cũng gãy ghế, bể xe. </div>
+    <br>
+    <div class="line">Lần cuổi Ở căn nhà đó Loan còn nhớ như camera man. Ba Loan đi làm về, ba mẹ con đang ăn tối, Loan được ba cưng lắm, vừa về đã đúc Loan ăn bằng cái tô nhựa màu xanh lá, đáy nông yêu thích của Loan. Trên tay là muỗng đầy ắp cơm với thịt kho hướng vào miệng Loan. Câu chuyện vẫn hướng về mẹ Loan, hai người nói chuyện về việc gì đó, nhúm cơm hun khói chưa kịp vào miệng, thì lạch cạch lách cách, nguyên cái tô cơm nóng hổi văng tung tóe trên mặt đất. Chị Loan lôi Loan đi, Loan thì đứng như trời tròng rưng rưng nước mắt, không phải vì mẹ sắp bị đánh, mà vì miếng mẻ xanh xanh rớt ra từ cái bát yêu quí của Loan.</div>
+    <br>
+    <div class="line">Loan nên người nhờ roi vọt, nhưng lại không vì nó. Vì số trận ba Loan đánh Loan, không bằng một phần mười so với chị. Loan biết làm nũng, Loan biết lấy lòng, Loan là học từ chị, là ganh đua tình cảm với chị, vậy nên lúc nào việc gì cũng làm tốt nhất theo ý ba mẹ.</div>
+    <br>
+    <div class="line">Chị Loan nói, từng ngóc ngách trong ngôi nhà cũ đó chị Loan đều nhớ rất kỹ. Loan lại không nhớ rõ như chị, nhưng từng ký ức còn đọng lại như những mảnh ghép xếp hình, xếp ra lủng mấy chỗ. Loan nhớ một lần tị nạnh với chị, muốn lập công trước mẹ mẹ, liền tấp tốc chạy vào nhà bếp tắt ga nồi canh, thế mà lại cắm đầu xuống đất, cái máy giặt lúc đó bằng tuổi chị Loan xi dầm, làm Loan xìa ngả chỏng vó. Thẹn quá hóa giận, Loan khóc thật to dù chẳng đau tí nào, tâm tư lúc đó Loan còn nhớ rất rõ, phải khóc to vô cho chị bị la, có láo không chứ. Thế là chị Loan không bị la, Loan bị na đi tìm bác sĩ. Cuối cùng bó một cục bột to bà chảng đầu tiên trong đời. Loan nhớ Loan chẳng đau gì mấy, bác sĩ lại chẩn đoán bị nứt xương đầu gối. Bị bóó nguyên cẳng mấy tháng trời, phong ấn hoạt động bay nhảy của Loan. Nhưng được chị chăm sóc rất tận tình, chị Loan bày bao nhiêu trò để chơi cùng Loan.</div>
+    <br>
+    <div class="line">Lúc nhỏ Loan sợ nhất là xe cần cẩu, mỗi lần thấy từ đằng xa lại nhảy cẩn lên, có lúc không cẩn thận, nhảy tỏn lên người chị họ ôm cứng ngắt. Thế mà cái trạm cần cẩu to nhất, lại ngay sát nhà Loan. Nên những việc như tự đi bộ đi nhà trẻ, Loan không tị nạnh lại chị được. Còn nhiều những ký ức mơ hồ khác đôi lúc vẫn len lẻn hiện lên trong tâm trí Loan. Nhưng nhớ rõ nhất vẫn là trận bão cuối cùng ở căn nhà gỗ mộc mạc đó.</div>
+    <br>
+    <div class="line">Sau lần đó, nhà Loan chuyển tới nhà sau này ở Thi Sách, quanh đó, cả nhà nội của Loan tụ sát nhau không thiếu một nhà nào. Miếng đất ba mẹ Loan mua lại từ bà nội, xây một cái trệt cả nhà ở. Đó là căn tầng hầm chiếm cả tuổi thơ của Loan. Có những hành trình phiêu lưu trên đống vải của mẹ, chất như núi luôn, ba mẹ la miết, nhưng thú vị vậy sao kiềm lại được.</div>
+    <br>
+    <div class="line">Chuyển sang nhà mới, những buổi giáo huấn của ba Loan tiếp tục hằng tuần. Khi Loan với chị ở trong trận thì mẹ can đứng ngoài can vô ích, khi tới mẹ thì Loan với chị trốn vào phòng, bên nào cũng lực bất tòng tăm. Cho đến một ngày, mẹ Loan có một quyết định lớn. Đó là một buổi tối Loan tí tởn đi với chị xem chị học võ, lúc về hai chị em đứng đợi cả buổi không có ai đón.</div>
+    <br>
+    <div class="line">Tối đó, cũng không biết sự tình ra sao, ba Loan đứng trước mặt tất cả mọi người ném xâu chìa khóa và bắt đầu đánh đập. Phận ai về nhà nấy, mặc cho xung đột một chiều đang diễn ra. Trong ký ức của Loan, tiếng cãi vả bên vách tường là điều thường thấy, sau đó sẽ kèm theo tiếng đập cửa. Nhà nào mà chả có cãi vả,  nhưng rồi sẽ có người ra can ngăn. Nhưng hôm đó lại không ai quản, cứ vậy mà về nhà đóng cửa hết. Lúc Loan với chị về thì đã là một đống mảnh nhựa rơi vãi, mẹ thì bằm dập ngồi khóc trong góc nhà. Hôm sau, mẹ quyết định ly dị.</div>
+    <br>
+    <div class="line">Hai người sống ly thân một thời gian, Loan với mẹ với chị lúc đó sống ở trên quán, tầng mà được xây thêm sau này để buôn bán, phía sau là một sân thượng trồng cây. Đến cả toilet cũng chưa xây. Ba mẹ con ăn ngủ mấy tháng trời với cái bô.</div>
+    <br>
+    <div class="line">Cuối cùng hai người cũng làm hòa. Mẹ Loan nói, lúc đó miệng Loan nói chả sao nhưng lại sút 2kg hơn, nên mẹ không li dị nữa. Cho đến tận bây giờ mà nói, Loan vẫn luôn là gánh nặng khiến mẹ Loan không rời bỏ ba. Nhưng cũng từ đó - từ khi ba Loan nhận ra mẹ Loan sẽ không còn nhẫn nhịn, thì không còn trận vũ phu nào nữa. Đó là trận cuối rồi. Ba với mẹ Loan thay đổi tính nết cho nhau, ba từ bạo lực thành hiền hậu hơn, mẹ Loan từ một phụ nữ nhẹ nhàng hiền dịu, rồi cũng bắt đầu cương khí hơn.</div>
+    <br>
+    <div class="line">Năm Loan lớp 4, bắt đầu trong đầu lúc nào cũng nghĩ về cái chết. Mỗi lần nào bị la, hay có tranh cãi, Loan đều tìm cách chết. Rồi dần dần, Loan phát hiện mình không dám, nhưng quả thật nghĩ về nó khiến mọi thứ tốt hơn. Nên lần nào Loan cũng chui vô phòng, lên kế hoạch cho màn tự sát của mình, đó là nơi trốn tránh thật sự hiệu quả. Tưởng tượng tưởng tượng và tưởng tượng, tưởng tượng cảnh mọi người hối hận, mọi người tự trách. Bao giờ cũng vậy, nó như thành một bài huấn luyện kỹ cương, để sau này có nghĩ đến bao nhiêu lần Loan cũng chưa từng thực sự thực hiện nó. </div>
+    <br>
+    <div class="line">Chỉ có một lần, Loan thực sự hành động. Hôm đó Loan ngồi trong lớp học phỏng vấn Visa. Hai người trước mặt cứ hỏi, Loan cứng đơ người, rồi nước mắt lưng tròng, cổ họng nghẹn đến không thở được, mới để nó rơi ra. Loan tự trách không biết bản thân bị gì nữa, cảm thấy bản thân vô vọng tột cùng. Học phỏng vấn xong đến tiết Thể Dục. Trên đường đi trời vừa hay mưa, Loan vừa hay có một buổi cúp học theo ý trời. Loan chạy xe quanh Sài Gòn, nhưng lại khóc không ra giọt nào nữa.</div>
+    <br>
+    <div class="line">Loan trước đây đều là ở chung phòng với chị, mỗi lần nào có khóc cũng khóc trong im lặng, không phát ra một âm thanh nào. Đến cả lần năm lớp 8, em trai Loan mất, đêm nào Loan cũng nằm khóc, cả hai tháng liền những ngày như thế. Khóc trong im lặng thật sự đau không tả nổi, đến cả thân thể run lên cũng phải đè nén nó xuống, quỷ tha ma bắt cái giường tầng hễ động là cót két. Đến nước mũi chảy tá lả cũng chùi hết cả vào quần áo, đến quen. Nên Loan rất thích mỗi lần trời mưa to, Loan sẽ xách xe đi chạy khắp cái Đà Lạt và la làng như chó mất con. Trời mưa và nhà vệ sinh, hai vùng an toàn và riêng tư mà Loan có.</div>
+    <br>
+    <div class="line">Hôm Sài Gòn mưa, Loan lại khóc không được nữa, Loan cho phép bản thân buông xuôi. Vậy mà ông trời cũng hùa theo, cái vía gặp đèn đỏ bủa Loan cả năm nhất, hôm đó lại xanh lạ thường, không chỉ một đèn, mà tất cả, đến đâu đèn cũng chuyển xanh. Loan nên lý giải là ông trời đang thương Loan, hay chính ông cũng thuận ý cho Loan. Tự vị, Loan lại buồn cười, lao đi nhanh hơn, đến đại một cái cầu mà quanh không ai để ý. Ông trời cũng mở đường rồi, đầu óc Loan còn nghĩ được j nữa. Ít ra cũng nghĩ được thêm được làm sao mà nhảy xuống. Loan không nghĩ được gì nữa cứ như vậy bỏ xe và lao đến, chính Loan cũng sợ hãi chính mình, nhưng mọi thứ cứ như cố gắng lôi Loan xuống dòng nước, Loan không còn biết bản thân đang làm gì nữa, chỉ biết bản thân phải thật dứt khoát, rất nhiều chuyện xảy ra đã không còn đường lui, phải thật dứt khoát. Vậy mà đâu ra, có người giật mạnh Loan lại. Loan chỉ biết cắm đầu cắm cổ cố lên xe rồi rời đi thật lẹ. Mặc cho chú mặc áo mưa kín mít cố giằng Loan lại mà giáo huấn. Chú la to đến mưa cũng không át được. Nếu là Loan bình thường nhất định là lên kế hoạch kỹ lưỡng và lựa tình huống sáng suốt hơn rồi. Loan nghe loáng thoáng nghĩ đến ba mẹ. Nghĩ gì nữa chứ, vì là sợ họ thất vọng, sợ không đáp ứng được kỳ vọng của họ nên mới càng không dám sống.</div>
+    <br>
+    <div class="line">Cũng không biết chạm vào chỗ nào rồi, Loan lại òa khóc trong mưa tiếp. Phải phải phải, dù Loan rất dứt khoát nhưng trong lòng lại gào thét, làm ơn có ai đó ngăn Loan lại. Cứ như vậy, Loan vừa khóc rồi lại vừa cười, trong người như có một ngọn lửa sống lại. Phải vì mẹ vì mẹ vì mẹ. Loan không được để mẹ đau lòng, không được ác với mẹ như thế.</div>
+    <br>
+    <div class="line">Hai lần nghe tin Quyên, một lần uống thuốc ở KTX, một lần là nhảy hồ, hai lần đó tâm thế của Loan đã khác biệt rất nhiều. </div>
+    <br>
+    <div class="line">Lần trước đó, lần mà Quyên bảo uống thuốc ở KTX, Loan vô hồn phóng xe chạy, hôm đó cũng lần đầu nhớ đường mà đi một mạch tới. Loan nghĩ, nếu Quyên thật sự không xong thì Loan cũng theo luôn. Thời gian đó là khoảng thời gian Loan liên tục nghĩ đến cái chết.</div>
+    <br>
+    <div class="line">Sau đó là lần nhảy cầu, rồi bừng tỉnh, Loan đã quyết tâm dù có nghĩ đến bao nhiêu lần cũng được. Từ hôm mà Loan được cứu, không phải Loan không còn nghĩ đến cái chết nữa, mà Loan luôn biết dù có nghĩ bao nhiêu lần Loan cũng nhất định không được thực hiện nó. Nhưng thực sự có những hôm, cả tâm trí và thân thể đều mệt mỏi, thật sự rất mệt mỏi. Loan luôn trong cảnh lo sợ, lỡ như bản thân chịu không nỗi mà dại dột. Bởi Loan cảm nhận rõ ràng sự bất lực khi bản thân nghỉ quẩn, cứ như có một thế lực cố gắng lôi mình đến Thế giới bên kia. Những lúc ở Hưng Phú, có những lúc năng lượng cứ rút dần rút dần, những ngày của con gái lại càng tệ hơn. Cả thể xác lẫn linh hồn đều dấy lên những sự khó chịu khó tả. Những lúc đó Loan cứ nhìn ra ban công, tự nhủ bản thân phải cố mà chịu đựng, nhưng mà luôn cảm thấy nếu không chịu được, Loan sẽ lại không nghĩ gì mà chạy ra đó nhảy xuống. Có những lúc khó chịu không tả nỗi, có khi chạy vào toilet tắm đẫm ướt hết mình sẽ lại thoải mái hơn, lần nào Loan cũng cầm theo dao, không phải vì muốn 44, chỉ là để cho mình một lối thoát, nếu thật sự không chịu được Loan sẽ từ bỏ mọi thứ, mặc cho tất cả. </div>
+    <br>
+    <div class="line">Lần sau này, hôm mà Quyên gọi điện nhóm ba đứa mình, lúc đó Loan đang học online, vừa hay sắp hết giờ. Rồi Loan lên sân thượng nghe tiếp cuộc gọi. Quyên cảm ơn, xin lỗi, cúp máy, thuê bao.</div>
+    <br>
+    <div class="line">Loan nhắm mắt, thở một hơi, lãnh cảm, từ tốn, áo khoác, chìa khóa xe, từng bước một xuống cầu thang, phóng. Loan chỉ là muốn đến cạnh Quyên thiệt sớm, như lần trước, chỉ ở bên cạnh và hiện diện thôi. Cũng nghĩ tới, lần này, nếu Quyên có chuyện thật, thì đó là sự lựa chọn và Loan sẽ tôn trọng. Loan biết được đó thật sự là một sự giải thoát. Dù Quyên lựa chọn gì Loan đều sẽ tôn trọng.</div>
+    <br>
+    <div class="line">Giữa đường Loan gọi thì không còn thuê bao nữa, Loan đã biết, Quyên ổn rồi. Loan biết mà, Loan biết Quyên vẫn còn rất yêu cuộc sống này, Quyên là người biết trải nghiệm cuộc sống nhất mà Loan biết. Loan biết Quyên vẫn rất can đảm. Niềm vui vừa dứt, Loan liền thấy thương chính mình, muốn gọi điện cho một người bạn rồi khóc thật lớn,, Loan vừa đi rồi vừa khóc. Giá như Loan cũng có thể được như Quyên, gào thét lên cho cả Thế giới rằng mình đã trầy trụa như thế nào. Rất nhiều suy nghĩ trên đường đi đến đó. Lần trước là Quyên không cố ý để Loan biết. Nhưng lần này thì khác. Lúc đầu, từ những instagram gần đó, rồi cả việc Quyên để Loan biết, vì Quyên đối với Loan rất nhẹ nhàng, không để Loan tổn thương. Lần đó Quyên lại gọi cho Loan, Loan sợ hãi, sợ thật là lần này không như lần trước nữa. Nhưng lúc điện thoại không còn thuê bao, Loan đã nhẹ nhõm đi phần nào, nhưng cũng mường tượng ra được những gì đang diễn ra.</div>
+    <br>
+    <div class="line">Loan đến KTX, chụp hình gửi Quyên, chiêu trò cũ thôi, vì Loan biết Quyên thương Loan nên sẽ không để Loan ở đó. Lần này Quyên bảo Loan về đi. Loan đã biết sự hiện diện của Loan trong sự tình lần này, là làm cho mọi thứ trở nên thật hơn. Loan biết người bên cạnh Quyên lúc đó là ai. Loan cũng an tâm, nghĩ chắc không sao rồi. Đứng dưới KTX thẫn thờ một lúc, cũng không biết bây giờ bản thân sẽ đi đâu, về đâu. Quay xe đi về. Loan tự cố bảo ban với chính mình, không nghĩ đến những thứ nặng lòng. Loan đi tà tà trong đêm Sài Gòn, khóc, rồi lại nín, rồi khóc.</div>
+    <br>
+    <div class="line">Đến khi về nhà thì đã đuối sức. Loan vẫn luôn sợ hãi từng bậc cầu thang ở Hưng Phú, nó là những ngày uể oải mà bước lên, bao giờ cũng là những bước chân không có sức lực, không phải từ thể chất, mà chính là những bước chân đó không tự nguyện lê lên. Nằm dài ra mà nghỉ. Chưa bao lâu thì có cuộc gọi của Duy. Loan muốn cùng Duy đi, Loan lo Duy đi một mình sẽ phóng nhanh, nguy hiểm. Duy ngược lại chẳng lo cho Loan. Duy cứ vậy đi trước</div>
+    <br>
+    <div class="line">Thời gian đó, lúc nào Loan cũng giữ bên mình một con dao. Để trong trường hợp xấu nhất, Loan còn có con đường mà giải thoát. Rồi Loan cũng chạm đến cái trường hợp xấu nhất đó. Loan nói cho ba mẹ biết về việc nghỉ học. Cũng không nhớ rõ sự tình như nào. Lúc đó Loan chốt cửa phòng lại, mặc cho ba bên ngoài tức giận đập cửa ầm ầm, Loan đã nghĩ đó là lúc thích hợp để thoát, nhưng cuối cùng cũng qua được. Vì lúc đó, dù sợ bản thân làm điều dại dột, nhưng lại càng sợ hơn cơ nhỡ có chuyện gì xảy ra, trạng thái của ba Loan rất không tốt, tức giận đến tăng xông. </div>
+    <br>
+    <div class="line">Năm lớp 7, ba mẹ Loan dăm ba lần lại đi đến ly dị, có lần vì tiền bạc, có lần vì trà xanh. Lần nào cũng là vì Loan mà họ ở lại. Từ cái lần mẹ Loan bảo ba ký giấy thỏa thuận chuyển hết tài sản cho Loan và chị, ba Loan đã thay đổi đi nhiều và yêu thương vợ nhiều hơn. Loan cũng khoảng thời gian đó, lại khát khao được đi du học, khát khao được lên Đại học, nơi nào càng xa gia đình càng tốt. Xa hàng xóm, xa những người trước đây từng yêu thương bảo bọc Loan rất nhiều, nhưng càng lớn, Loan với họ lại càng xa cách, tính cách nhút nhát, rụt rè, Loan của lúc bé không như vậy, Loan luôn hoạt bát, dí dỏm làm trò với mọi người. Vậy nên Loan càng muốn thoát ra, thoát ra mọi thứ, đến một nơi xa lạ để Loan được làm lại cuộc đời, để được sống đúng với chính mình.</div>
+    <br>
+    <div class="line">Ở Duy đôi khi Loan nhìn thấy chính mình. Nhưng thật không biết phải tả làm sao. Loan vốn không biết cách nói ra suy nghĩ của mình, cũng không biết cách tâm sự. Duy cũng vậy, Duy lúc nào cũng tỏ ra vui vẻ, mạnh mẽ.</div>
+    <br>
+    <div class="line">Vị trí của hai đứa mình đối với nhau bây giờ lại mông lung như vậy. Loan không muốn mất Duy, vì khoảng cách của mình đang dần xa nhau. Sau này Duy đi Đức, không biết sẽ sao nữa. Có điều Loan nghĩ, ở đó Duy sẽ tự do hơn, sẽ dễ dàng liên lạc hơn. Chỉ là, Loan thật sự không biết cách để giữ kết nối, hoặc là không dám. Đúng, nói chính xác là Loan không dám chủ động.</div>
+    <br>
+    <div class="line">Từ ngày cả nhà Loan chuyển vào vườn ở, từ đó Loan cũng mất đi tự do của mình. Loan luôn kiềm cặp trong sự kiểm soát của mẹ. Mẹ Loan là một bệnh nhân tâm lý, mẹ Loan đã từng trầm cảm rất nặng và vẫn chưa dứt hẳn. Có phải vậy mà Loan luôn thấy cảm giác họ mang lại có rất nhiều điểm chung. Loan luôn cố làm cho mẹ vui, những khi có thể, luôn thuận theo những thứ mà mẹ an bài. Loan cũng bắt đầu, cách xa mọi người từ đó. Những lúc về Đà Lạt, mẹ Loan luôn muốn giữ Loan ở bên mình. Lúc Loan muốn đi chơi cùng mọi người, mẹ Loan sẽ tìm mọi cớ để chở Loan đi, không có xe máy, Loan mất tự do rất nhiều. Đây quả thật là một cái bóng đêm mà cho đến hiện tại Loan vẫn chưa thể thoát ra. Loan không muốn nghĩ nhiều về nó nữa.</div>
+    <br>
+    <div class="line">Chỉ là Loan cảm nhận, có phải Duy cũng như vậy không? Liệu Duy có giống Loan, liệu Loan cảm nhận có đúng không? Loan với Duy có phải đều chung một hoàn cảnh không? Là những người bao bọc trong cảm xúc của mẹ mình. Thật sự khi nghĩ tới trong lòng Loan bị nè nặng rất nhiều, nó ngột ngạt và bí bách. Loan không còn muốn đi đâu, hẹn ai nữa, vì mọi thứ đều trong sự kèm cặp của mẹ, một sự kiểm soát khiến mọi thứ đều trở nên ngột ngạt. Loan không đối diện với nó, Loan không thể, vậy nên Loan chấp nhận không cần gặp ai nữa, những người bạn cấp ba, và cả Ý nữa, mấy năm trời rồi Loan không gặp họ. Loan chấp nhận thuận theo ý mẹ, ít nhất là làm mẹ thấy vui, và bớt đi được mấy cuộc tranh cãi.</div>
+    <br>
+    <div class="line">Chỉ nghĩ đến thôi, Loan đã buồn nôn, thật ngột ngạt, Loan đã chọn xuôi theo nó rồi, thôi sẽ không nghĩ nhiều về nó nữa. Không biết dùng lời để diễn tả ra sao nữa.</div>
+    <br>
+    <div class="line">Lần trước mơ thấy Duy khóc</div>
+    <br>
+    <div class="line">Loan cảm nhận rất nhiều thứ từ giấc mơ đó. Trong mơ Loan vòng tay qua vai Duy, ôm Duy trong lòng vẫn khóc không ngừng. Loan cũng không mở một lời nào ...</div>
+    <br>
+    <br>
+    <div class="line">Duy Duy</div>
+    <br>
+    <div class="line">Năm Loan lớp 8, em Loan nằm viện hơn 2 tháng, Loan còn đi học nên không xuống thăm được, cứ mỗi ngày có thông tin lại là tình trạng tệ đi, rồi một hôm bác sĩ bảo chân em ấy hoại tử rồi. Em Loan bị sốt xuất huyết, căn bệnh nghe quen thuộc, đến độ Loan nghĩ y tế hiện tại đã hoàn toàn chống lại được nó rồi. Vậy nên Loan không tin, từ hoại tử nghe quen thuộc đến vậy nhưng Loan cũng không tin, Loan cho rằng chắc là một loại hoại tử nào đó thôi, rồi bác sĩ sẽ chữa được. Em Loan sẽ không bị mất đi một chân, ngồi xe lăng cả đời. Cứ như vậy, đến một ngày cả ba mẹ Loan kéo nhau xuống Biên Hòa, bảo là em Loan khỏe rồi nên xuống chúc mừng. </div>
+    <br>
+    <div class="line">Loan thi xong môn cuối là Thứ 7, hôm đó về, ba Loan báo, em Loan đã qua đời, là hôm thứ 3.</div>
+    <br>
+    <div class="line">Trời mưa, trời mưa và trời mưa. Em Loan tên Ti-gôn, tuổi Trâu, thích nhất là vọc vũng nước vũ tạo. Lúc ngủ hay bặm môi, lại còn thích mân mê tay người nằm cạnh. Gặp Loan là người thích có người vọc lúc ngủ, rất dễ chịu. Loan thích hát, Gôn thích nghe Loan hát, chị hát nữa đi. Có những lúc hai chị em chui vào phòng kín để hát nhau nghe. Gôn khi ngủ thích nghe kể chuyện, Loan thích bịa chuyện mà kể, kể câu chuyện trong trí tưởng tượng của mình. Loan kể cho Gôn rất nhiều câu truyện trong trí tưởng tượng của mình, cứ kể dù không biết cái kết sẽ nằm ở đâu. Những cuộc du ngoạn dưới biển, thành người tí hon, hay nkhi em Loan biến thành con cá mập sẽ như thế nào. Loan nhớ em, nhớ rất nhiều.</div>
+    <br>
+    <div class="line">Đứng trước sự bất lực khi người thân nằm viện bao lâu mà mình chẳng làm được gì. Loan của lớp 8 đã quyết định mình sẽ học Y khoa để làm Bác sĩ.</div>
+    <br>
+    <div class="line">Bao nhiêu khát vọng và hoài bão. Nhưng biết không, Loan đã sớm từ bỏ trong thâm tâm mình. Lúc đó không được vào đội tuyển Tỉnh, Loan biết mình nhỏ bé đến nhường nào. Dù biết ước mơ càng ở trên cao, càng phải nỗ lực và cố gắng rất nhiều. Nhưng những gì Loan làm chưa bao giờ chạm đến chữ cố gắng. Trách cứ bản thân sao lại như thế. Thật tồi, thật tồi.</div>
+    <br>
+    <div class="line">Từ lúc chị qua Mỹ, Loan đã định hướng từ sớm, rồi lao đầu vào các hoạt động Trường lớp. Loan chọn học nửa kỳ ở Đại học để trải nghiệm rồi mới đi du học, giống chị họ.</div>
+    <br>
+    <div class="line">Rồi có những sự việc, mà phải đến sau này, Loan mới nhận ra Loan đã để mọi thứ tích trữ dồn dập, góp từng ít từng ít một, rối thành một nùi. </div>
+    <br>
+    <div class="line">Trong 3 năm cấp ba, chuyển nhà hơn 8 lần, chưa kể những lần đi đi lại lại.</div>
+    <br>
+    <div class="line">Tham quan ngôi nhà tuổi thơ của Loan không. Duy chưa được biết nó bao giờ. Nhà Thi Sách nằm đối diện Trường Lam Sơn. Nguyên khu đó là cả nhà bên nội Loan hết luôn, mỗi nhà mỗi căn sum vầy lại. Nhà Loan nằm cạnh bên cái dốc, nên tầng Trệt như một tầng hầm. Trên dốc đi xuống là ống hút khói ngang tầm mắt, cửa sổ nhà bếp nằm ngay dưới chân, làm 4 thanh dọc xuống, lúc bé Loan còn chui qua được cơ, cứu nguy cả nhà được mấy lần, sau này đổi lại là 8 tấm kính ngang. Đi xuống dốc tiếp là cửa sổ phòng ngủ ba mẹ Loan với tay là chạm tới chỗ cao nhất. Cửa sổ to lắm nha, nằm lên cũng được nữa.</div>
+    <br>
+    <div class="line">Đi xuống chân dốc là cửa chính. Bước vô là phòng khách, ngày xưa chất nhiều vải lắm, Loan tuột cầu tuột, chơi đủ thứ trò. Sau này trang hoang làm phòng khách, mà coi như là phòng học của Loan luôn, kể từ ngày sắm giường tầng, phòng chật đi không còn bàn học riêng nữa, Loan toàn ra đó học, vừa làm bài vừa mở TV phía đối diện. Có một hành lang trải dài từ phòng khách đến nhà bếp. Lúc nhỏ Loan thích bám vào hai bờ tường xong đu như khỉ lên tới trần nhà, nguyên cái hành lang đó là cả rừng của Tarzan, sau này ba sơn lại tường rồi mới thôi. Phía bên phải tường hành lang là 3 bức tranh hàng lưu niệm tồn kho ngày xưa mẹ Loan bán, treo ở đó vừa đẹp, vừa đỡ trống. Với riêng Loan thì vừa là kho bạc, mà thật ra chỗ nào trong nhà cũng là kho bạc của Loan, Loan giấu tiền khắp nơi trong nhà. Vì mất cảm giác an toàn nên thường xuyên đổi vị trí. Không chừa một ngóc ngành nào mà chưa từng làm quỹ đen của Loan cả. Có lần ba Loan phải đi lục thùng rác, vì đem vứt con gấu bông yêu quí của Loan, Loan nhờ nhỏ giữ giùm phần lớn đống tiền tích góp, phải hơn năm trăm nghìn. Đến độ máy tính bấm để bàn của mẹ Loan Loan còn tháo vít ra nhét tiền vô nữa. Thanh sắt khung ghế cũng là nơi lý tưởng, khổ nổi lúc lấy ra hơi xu thoi. Loan giàu lắm, một lần khui quỹ là toàn 3-4 triệu không. Bẹp, đối diện mấy bức tranh đó là phòng ngủ của Loan với Chị. Loan nhiều kỷ niệm với nó lắm, bao nhiêu gia đình sinh đẻ ra ở đó. Cửa sổ to to màu trắng hai lớp, một lớp cửa kính khung gỗ sáu ô bên trong, và một lớp cửa gỗ 21 thanh ngang, một thanh ngang lớn ở phía ngoài. Cửa sổ cao tầm ngang ngực, leo lên được, leo lên đó ngồi chill lắm, bên cạnh là con dốc nên không sợ té, đôi khi dùng nó như cửa chính luôn.</div>
+    <br>
+    <div class="line">Sau này xây thêm lầu 1 buôn bán, rồi xây thêm toilet , về sau có thêm bếp núc cho tiện luôn. Mẹ Loan rát giỏi, lại may mắn gặp thời. Mấy năm đso Đà Lạt lạnh lắm, áo măng tô bắt đầu hot lên mà mẹ Loan dường như là người đầu tiên ở Đà Lạt may áo măng tô. Ngày xưa trong bao nhiêu loại, mẹ Loan thích may măng tô nhất, vải dày dặn lúc may sẽ không ọt ẹc cắt rạp ra và ráp nó lại. Mẹ Loan có khiếu thiết kế, tự mình mày mò tạo rạp, rồi đưa thợ cắt. Cả nhà phụ mẹ cắt rạp này, đóng nút, rồi may nút vào áo. Cái đồ làm nút thú vị lắm, nó là một trụ đồng có đáy um tròn lại, mình bỏ miếng vải cắt sẵn hình vuông vào, đặt lên khuôn nút, túm chỗ vải lại rồi đặt tiếp lên khuôn có lỗ xỏ chỉ, sau đó đậy nút pít tông lên, dùng một dụng cụ có cần gạt rất nặng, đặt đủ trụ có đủ kích thướ vào vị trí rồi, 1,2,3 dập thật mạnh xuống cho thật chắc. Loan làm fail mấy cái liền vì cứ quên bước này bước kia. Rồi đính nút vô phụ mẹ, lúc chưa biết đính thì xỏ kim cho mẹ. Đợt đó vào giữa đông năm Loan lớp 2, Loan đi học về thấy quán trống trơn, hoảng hốt tưởng chủ nợ tới hốt hết đi không, không ngờ tới được là hơn mấy trăm cái áo măng tô được bán sạch như thế. Nhà Loan phất lên rát nhanh, dưới mẹ Loan có hơn 20 thợ. Loan thì kết nút và đóng nút, vui lắm, Loan chủ yếu thích thì làm cho vui chứ không phụ được mấy a, nguồn lực chính không có Loan. Loan lười làm việc nhà lắm, toàn là chị Loan phải làm Loan như đứa con bị chiều hư việc gì cũng làm biếng. Cơ mà mấy việc lấy lòng mẹ thì giỏi lắm, sáng nào Loan cũng mở quán ranh ma nở canh ra, treo áo trưng bày lên mặt tiền. Cầm cái cây gỗ có cái móc phía trên treo lên treo lên, nhón cũng nhiều mà sao không phát triển chiểu cao. Nhà Loan làm ăn phát đạt. Tới giờ Loan cũng không biết nó có phải lý do khiến mọi người dần rời xa Loan không nữa. Năm Loan lớp 3, một lần 2 chị em Loan bị chị họ nhốt ở nhà thờ, đó là sau này mẹ Loan kể lại thôi. Ký ức của Loan chỉ có, người chị họ vô cùng thân thiết bỗng một ngày kiếm cớ mà nghỉ chơi với chị em Loan. Cũng từ đó mà tình cảm của Loan với bất kỳ ai trong nhà nội cũng xa cách, Loan rụt rè đi dần bản thân luôn tự ti về khả năng giao tiếp của mình. Năm lớp 5 nhà Loan sắm được một chiếc xe ô tô morning nhỏ màu đỏ. Rồi có hôm cả cái xe bị xịt keo trắng chảy lê thê khắp nơi, đau lòng hơn, người làm lại là người trong nhà. Loan anh dũng đập con heo tiết kiệm của mình, được hẳn 5 triệu đưa cho mẹ đi sửa xe, 5 triệu đó cũng là tiền tích góp và những đồng tiền đầu tiên Loan kiếm được khi đi buôn hàng tồn kho của mẹ ở trên trường. Mẹ Loan thua lỗ một sạp đồ lưu niệm nên tồn lại quá trời. Loan có cơ duyên mang nó lên trường bán, đầu óc Loan nhìn nhìn người tới tới đi đi là quay cuồng rồi, không hợp buôn bán nên thuê hẳn một nhân viên bán, một vệ sĩ giá 15k một ngày. Lần bị xịt keo đó, mẹ Loan vờ nói là công an chịu trách nhiệm cho hết, không tốn đồng nào, để mai mốt không bị nữa. 
+    <br>
+    <div class="line">Rồi một lần cả nhà quyết định xây một cái gác nhỏ phía trong bếp, cả nhà ở đó hết, để ở dưới cho thuê, vì kinh tế khó khăn mà. Các gác đó chị Loan ở chưa được bao lâu là đi Mỹ.</div>
+    <br>
+    <div class="line">Những năm cấp 3, Loan học hành sa sút. Năm lớp 10, có một thời gian cả nhà Loan sáng ở nhà này, tối ở nhà khác. Lúc đó Bà Loan bên Mỹ về, gia đình là ân nhân giúp chị có chỗ ăn chỗ ở khi qua đó. Nên nhà Loan tiếp đón bà rất nhiệt tình. Mà bà không thể ngủ cùng cả nhà trên gác. Vì bật thang rất cao. Sau mấy đêm để bà và mẹ ngủ sofa, cả nhà Loan chọn sẽ qua một căn nhà đang rao bán để ở. Vậy nên ngày nào đến tối cũng sửa soạn mà di cư. Việc học hành của Loan cũng khó khăn hơn rất nhiều. Nhưng Loan cũng chỉ biết linh hoạt theo thôi, lúc đó cũng thấy bản thân đang có trải nghiệm rất thú vị. Có điều ngủ ở chỗ lạ chẳng ngủ được bao nhiêu, sáng nào lên lớp cũng gục gà gục gật. Cứ như vậy, Bà Loan ở cùng cả nhà hơn 3 tháng. Thiệt sự, nhờ có bà, mà gia đình Loan có những bữa cơm quây quần bên nhau. Ngày nào cũng cùng ăn cơm trưa, cùng ăn cơm tối, hiếm khi vắng mặt ai. Nên thời gian đó Loan rất vui vẻ, cũng rất yêu quí bà. Chỉ là mẹ Loan vì chiều bà mà có những lúc rất mệt mỏi, Loan lại chẳng san sẻ được chút gì.</div>
+    <br>
+    <div class="line">Mẹ Loan hứa với bà, lần tới bà về sẽ tiếp đón bà chu đáo hơn. Vậy nên có một quyết định táo bạo, là vay ngân hàng để xây căn nhà Thi Sách thật trang hoang. Mai mốt chỉ cần bán được nhà là sẽ trả được nợ. Thời gian đó Loan được chuyển xuống lại căn tầng trệt cũ, bao nhiêu là ký ức ùa về. Cứ tưởng được ở phòng riêng, nhưng vì đồ đạc quá nhiều nên chỉ chừa lại một phòng ngủ. Loan ngủ chung phòng với ba mẹ thêm khoảng thời gian phía trên xây dựng.</div>
+    <br>
+    <div class="line">Bây giờ nghĩ lại mới thấy lúc đó Loan sống thật vô tri, bao nhiêu điều mới lạ, bao nhiêu là cảm xúc, nhưng Loan chỉ toàn giữ trong lòng chẳng cùng tâm sự với ai. Như những đóng rác bị Loan quẳng vào một góc, cố lơ nó đi, mọi thứ Loan đều lơ đi để cho tiềm thức mình nghiền nhai đó. Chất ngày một, ngày một. Chính là đầu óc đã chật chội, trống rỗng từ đó.</div>
+    <br>
+    <div class="line">Ba mẹ Loan vì để xây nhà mà gặp biết bao nhiêu chuyện, giấy tờ giấy phép ở đâu cũng làm khó. Hàng xóm thì tố cáo, báo cáo với chính quyền. Rất nhiều chuyện xảy ra nhưng đều là nằm ngoài khả năng của bản thân, Loan chỉ biết cố gắng cho việc học của bản thân, linh hoạt thật nhiều để đỡ đần phần nào. Loan vốn không kỳ vọng cao ở bản thân, nhưng vì ước mơ của chính mình, ước mơ làm bác sĩ, nên mới cố gắng đặt nhiều mục tiêu cao cho chính mình. Nhưng học hành cứ ngày một sa sút sa sút. Lúc đó Loan không để ý, cả thời gian và không gian học tập của bản thân đã bị chiếm đi rất nhiều rồi. Vừa chuyển nhà, vừa là hoạt động của Đội Văn nghệ của lớp. Hai năm đầu cấp ba Loan ôm mọi việc của lớp vào bản thân.</div>
+    <br>
+    <div class="line">Khi nhà đã xây xong, lần đầu tiên trong cuộc đời Loan có phòng riêng, có rất nhiều cảm xúc, trong lòng hừng hực ngọn lửa phấn khởi. Lúc đó chị họ Loan bị ung thư. Nghĩ cũng thật buồn cười, chỉ vì cô Loan qua và chọn một phòng, nói mẹ Loan để phòng này cho chị họ Loan ở dưỡng bệnh. Cũng không biết sao lúc đó mẹ Loan rất buồn trong lòng, bảo Loan chuyển sang phòng đó ở. Nên Loan chuyển sang phòng đó, nó rộng hơn và còn có bồn tắm nữa. Ban đầu Loan chọn phòng nhỏ hơn, vì vừa có nắng sớm, không gian nhỏ cũng giúp tâm trí Loan đỡ bộn bề nữa.</div>
+    <br>
+    <div class="line">Loan lúc đó là đứa chẳng bao giờ nổi nóng. Vậy mà cũng trở nên cáu kỉnh, ba mẹ vẫn chưa thích nghi với không gian riêng của Loan. Mỗi lần ai bước vào phòng mà không gõ cửa, Loan đều cáu kỉnh, khó chịu, rồi thái độ. Loan bảo ba mẹ phải gỡ cửa, nhưng hầu như họ đều quên. Loan thì lại tự trách với thái độ của mình. Nhưng Loan biết ai tuổi này cũng có những biểu hiện như vậy, mới nhẹ nhõm phần nào. Rồi Loan lúc nào cũng phải khóa cửa phòng hờ, nó lại là điều khiến ba mẹ tổn thương, nhưng họ phải thích nghi dần thôi. Nhưng đến cùng người thích nghi vẫn là Loan, Loan phải tập bỏ qua những nhu cầu của mình, chỉ vì Loan không muốn sự khó tính của mình làm tổn thương họ.</div>
+    <br>
+    <div class="line">Nhưng rồi cũng không ở phòng riêng được bao lâu, vì dù sao trong khoảng thời gian xây nhà, mẹ Loan xem như là thất nghiệp. Nên lúc đó muốn kiếm thêm thu nhập, nhận khách cho thuê phòng. Loan lại có những tháng ngày đi đi về về, hành trang của Loan chỉ là cái cặp chứa đầy đủ sách vở và bút viết. Sau đó thì, mẹ Loan không chịu được áp lực khi làm dịch vụ, nên từ bỏ công việc này. Loan được trở về phòng riêng của chính mình, căn phòng do chính tự bản thân chọn nội thất, đèn phòng, lavobo, phòng tắm, hahaha.</div>
+    <br>
+    <div class="line">Chính Loan cũng lại tự bất ngờ với số phận di cư của mình. Ngày phim Bố già ra mắt, Loan rủ cả nhà đi xem phim. Đó là lần đầu tiên cả nhà Loan cùng đi rạp và xem phim. Chỉ là không ngờ tới, bộ phim hay tới nỗi, mang lại rất nhiều cảm xúc. Trên đường về cả nhà rơi vào một khoảng lặng không tên. Về đến nhà, bao nhiêu nỗi ấm ức, từ quá khứ, đến hiện tại, những gì dồn nén trong mẹ Loan bấy lâu nay, đều nói ra hết, trút ra hết. Loan ở một bên, lặng lẽ chỉ biết ở một góc lắng nghe. Ai cũng có phần đúng, ai cũng có phần sai. Nhà Loan là vậy, bao giờ sau những cuộc cãi vã, đều là những sự im lặng, chưa bao giờ thật sự giải quyết, chưa bao giờ có người đứng ra làm hòa, chỉ vậy, cuộc sống cứ trôi và mọi chuyện cứ như chưa từng xảy ra thôi, mẹ Loan cũng vì tính xem như chưa có gì xảy ra này của ba mà tổn thương rất nhiều. Những đêm sau đó, mẹ Loan lên ngủ cùng Loan, không gian riêng tư cứ vậy mà bay về một nơi xa. Loan ít khi tâm sự với ai, tất cả đều trút hết vào nhật ký. Mấy ngày đó mẹ ở cùng nên chẳng có không gian để ghi chép, rồi Loan để mặc cho mọi thứ trôi. Một lần nữa, trong mấy ngày ba Loan không làm hòa được với mẹ, mọi chuyện càng nghiêm trọng hơn. Ba mẹ Loan ly thân một lần nữa. Loan cùng mẹ chuyển sang nhà khác ở. Thời gian đó là thời điểm quan trọng, là những ngày đếm ngược kỳ thi học sinh giỏi Tỉnh. </div>
+    <br>
+    <div class="line">Vẫn như cũ, truyền thống nhà Loan vẫn luôn là xem như chưa từng có chuyện gì xảy ra. Một biến cố ập đến khiến ba mẹ Loan, dù có sao cũng phải hàn gắn lại. Chú của Loan - ba của em Gôn qua đời. Cách đó một năm Loan còn giúp Dì cài GPS vào máy chú, rồi Dì bắt quả tang tại trận chú ngoại tình. Rất nhiều những biến đổi kéo theo, chú Loan ra đi, để lại khoảng nợ hơn 5 tỷ.</div>
+    <br>
+    <div class="line">Mọi chuyện cứ vậy mà xảy ra. Loan như cũ luôn giữ vẻ bề ngoài như chưa từng có gì xảy ra. Ngày ngày đi học, lúc nào cũng phải cố tỏ ra vui vẻ. Không phải vì Loan muốn sống giả tạo với bản thân, mà là sợ, nếu không như vậy, sẽ vô ý có người chọt vào nỗi đau của mình. Loan thấy bản thân diễn rất tốt. Thế nhưng lại bị cô Vy - giáo viên bồi dưỡng môn Sinh cho Loan phát hiện, cô ác lắm, cứ vậy chọt vào chỗ tổn thương trong Loan. Loan kiềm không được mà rơi nước mắt. Trong nguyên buổi họp học sinh đội tuyển đó, Loan cứ ụp mặt xuống bàn cố nén nước mắt lại mà không được, cô cứ ở bên vỗ về, làm Loan càng không kìm được nó. Xúi quẩy thay, hôm đó là ngày chụp CCCD, bởi mới bảo cô quá ác. Cứ vậy, Loan bê cái mặt dù tạt bao nhiêu nước cũng không bớt sưng đi vào ngồi cho chú công an chụp. Phải đến đó thì sự diễn của Loan cũng bất thành, có vẻ mọi người ai cũng đã biết Loan khóc sưng mặt, không biết có ai biết không nữa. Thật may là mọi người tâm lý không ai hỏi tới. Đi tong cái CCCD để đời a.</div>
+    <br>
+    <div class="line">Thời gian sau đó, Dì Loan gửi em Loan lên Đà Lạt. Lần đầu là bé Ti-ni lúc đó 2 tuổi. Loan thương Ti-ni lắm, Dì Loan luôn đinh ninh rằng là, Ti-ni là Ti-Gôn đầu thai. Lúc Gôn mất, Dì Loan xem bói, được bảo là nếu sinh tiếp thì Gôn sẽ đầu thai làm con của Dì. Vậy nên cả Chú với Dì cùng cố sinh thêm một em bé, vì vụ này mà mẹ Loan cũng la Dì tơi bời. Còn Loan thì giống Dì, sự ra đời của Ti-ni là niềm an ủi lớn với tất cả. Loan nhận trách nhiệm chăm sóc cho Ti-ni, ẻm cũng rất quýn Loan nên nhất định không ngủ cùng ba mẹ Loan, ăn cũng là Loan đút mới chịu. Thời gian đầu rất vui, nhưng Loan bận việc học, việc ở trường quá nhiều, không thể cân bằng hết được, vậy nên lúc đó Loan rất tự trách, vẫn là để ba mẹ chăm nom em. Sau 2 tháng thì Ni xuống lại với Dì, đến mùa nghỉ hè rồi nên thay Tốp lên, Tốp lúc đó học lớp 2. </div>
+    <br>
+    <div class="line">Loan tiếp tục nhận trách nhiệm chăm sóc và dạy kèm cho Tốp. Quảng thời gian đó Loan mới nhận ra Loan gia trưởng cỡ nào, Loan cũng mang trong mình tính kiểm soát nữa. Loan yêu trẻ con lắm, từ nhỏ đã luôn tưởng tượng về đứa con sau này của mình, Loan thích giáo dục, hồi tiểu học Loan được cử đi sinh hoạt lớp cho mấy nhóc lớp 1, được tụi nhỏ yêu dữ lắm, Loan lúc đó rất tự tin về khoảng chỉ bảo trẻ em của mình. Loan thích đọc mấy cuốn tâm lý, mỗi lần đọc sẽ tưởng tượng ra mai mốt mình sẽ dạy con như thế nào, để nó có đời sống tinh thần tốt nhất. Nó trở thành những kỳ vọng vô hình. Năm đó là hè lên lớp 12, một mùa hè vô cùng quan trọng với sĩ tử. Loan tiếp tục đặt những nguyện vọng mới cho năm mới, trong có có cả những bằng để chuẩn bị cho việc du học. Thế mà mùa hè đó Loan bận rộn với đám nhóc, vì muốn kiếm bạn cho em Loan nên phòng Loan thành nhà giữ trẻ. Đó cũng là thời gian mà Loan có cơ hội chơi đùa và làm bạn với những đứa cháu của mình.  Thế là ngày nào bọn trẻ cũng qua nhà Loan chơi hết một kỳ hè. Việc học của Loan cũng chuyển hết vào buổi tối. Có những hôm Loan đợi em Loan ngủ đến khuya mới lén qua bàn để ghi nhật ký. Cứ như vậy, đến một ngày Loan stress, bao nhiêu chuyện không còn trong tầm kiểm soát nữa, không gian riêng tư cũng không có. Loan lại áp đặt những kỳ vọng lên em Loan. Thành ra khiến mọi thứ tệ đi, tình cảm chị em cũng rạn nứt, Loan thấy có lỗi với Tốp lắm.</div>
+    <br>
+    <div class="line">Cũng thời gian đó, Loan phát hiện ra rất nhiều thứ. Haizzz</div>
+    <br>
+    <div class="line">Lúc đó dịch Covid, mẹ Loan vốn không muốn ở nhà cùng ba nên kiếm chỗ khây khỏa. Cũng không biết sao mẹ Loan luôn không vừa mắt với đứa nhỏ. Nên ngày nào cũng vào vườn trồng cây chăm trái, từ sáng đến chiều. Ngày xưa ba Loan có một vườn cà phê rộng lớn ở trong suối Vàng, tuổi thơ của Loan cùng ba đi làm vườn rất đẹp, một ký ức thoang thoảng mùi cà phê. Sau này làm ăn thua lỗ nên bán đi. Vì tiếc nên dành ra một góc mua lại miếng đất sát đó. Mảnh đất để trống bao nhiêu lâu, vô tình ba mẹ Loan được tặng giống hoa hồng rất đẹp, nên mang trồng trong vườn. Mẹ Loan vô tình vào thấy cây không được chăm chút, thế là tự mình chăm nó. Ngày nào mẹ Loan cũng đắm chìm trong khu vườn của mình. Loan cũng ít gặp mẹ đi. Đến một ngày mẹ Loan muốn xây một cái chòi ở trong vườn để mỗi lần vào làm vườn có chỗ mà nghỉ ngơi. Rồi đi tham khảo khắp nơi mẫu chòi. Vạn sự biến hóa, ý tưởng cái chòi ban đầu dần biến thành một căn nhà luôn. Kiểu lỡ xây rồi thì xây luôn cho có đầy đủ tiện nghi á. Từ đó, căn nhà Suối Vàng ra đời, trong sự không ngờ tới của cả nhà Loan. Trước đó anh Loan xem bói, nói rằng sau này mẹ Loan sẽ ở một căn nhà cạnh suối, có rất nhiều cây, mẹ Loan còn không tin cơ. Đến khi xong xuôi căn nhà, mới nhận ra lời tiên tri năm nào. Cả nhà Loan chưa từng nghĩ sẽ rời khỏi ngôi nhà Thi Sách gắn bó bao nhiêu lâu.</div>
+    <br>
+    <div class="line">Sau đó nữa thì, mẹ Loan mua giúp Dì một căn nhà, ban đầu tính sửa sang lại sơ thôi rồi ở. Việc buôn bán cũng không tiến triển, thế nên nhà Loan để lại căn nhà Thi Sách, cho thuê kiếm thu nhập. Dì Loan thì bôn ba suốt mấy tháng trời bán những nội thất trong nhà. Gom góp những đồng nào có thể gom, chủ nợ cũng không ngại cảnh tang gia mà đến đòi. Rao bán được căn nhà cùa Dì thì cũng trả được phần lớn nợ. Dì Loan không con đường nào khác, nên dự định chuyển lên Đà Lạt, mẹ Loan lo giúp trên đây.</div>
+    <br>
+    <div class="line">Vừa hay cho thuê được nhà Thi Sách, cả nhà Loan lại chuyển nhà sang Hoàng Diệu. Lúc đó nó còn là căn nhà gỗ lụp xụp, nguyên một căn vậy đó, có một cái gác phía trên. Ở một thời gian thì mới phát hiện ra có quá nhiều vấn đề vẫn là phải sửa sang lại, logic cũ, đã lỡ sửa rồi thì phải sửa cho đàng hoàng luôn. Thế là có căn nhà Hoàng Diệu bây giờ, từ một căn nhà mọi thứ lụp xụp, tạm bợ đầy mùi của gỗ, mẹ Loan chia làm hai vách xây được thành hai căn nhà. Loan luôn ngưỡng mộ, thần tượng mẹ Loan dữ lắm, mẹ Loan quả là có tài và thiên phú trong bất động sản a. Trong lúc xây gặp bao nhiêu là trục trặc, hàng xóm báo cáo chính quyền quá trời, lúc đó vừa hay là lúc có app liên lết người dân với chính quyền nữa. Ngày nào Loan lên đó check cũng thấy nhà mình huy hoàng được xướng tên. Thế là phải đập đi, xây lại, rồi lại len lén, đập đi xây lại.</div>
+    <br>
+    <div class="line">Thời gian đó nhà Loan chuyển vào vườn ở. Dần cũng quen với nếp sống ở trong rừng. Mai mốt hết dịch, nhà Hoàng Diệu xây xong, lại chuyển ra đó ở cho Loan đi học. Bao nhiêu lần chuyển đó từ hồi ở nhà Thi Sách, đều có Rơm - con mèo Loan nuôi năm 11 chuyển cùng Loan, Loan cũng sợ nó stress lắm, mà trộm vía nó dễ sống, nó cùng Loan ở ba căn nhà liền. Kỳ đó xuống Sài Gòn thi đánh giá năng lực, Loan không chu đáo, để nó chạy đi tìm Loan rồi lạc mất.</div>
+    <br>
+    <div class="line">Dì Loan chuyển lên Đà Lạt, cả nhà sum vầy. Lúc nhỏ năm nào hai nhà cũng sum vầy. Năm thì nhà Loan xuống Biên Hòa, năm thì nhà Dì lên Đà Lạt. Lúc nào mấy chị em cũng ước nhà Dì chuyển lên Đà lạt, giờ thì ước mơ thành hiện thực rồi. Năm đó sót một năm Loan lớp 7, hai nhà không sắp xếp được nên không gặp nhau. Lớp 8 thì em Loan mất, vậy nên lần cuối gặp đã là từ lớp 6. Loan còn nhớ hôm cuối đó ở Biên Hòa, 4 chị em có chị Thy, Loan, Ti-Na, Ti-Gôn cùng nhau hát karaoke, lưu luyến đến tận sát giờ xe đến. Bài cuối hát chung là bài Không cảm xúc. Cũng không biết sao sau này, mỗi lần bài đó vang lên, Loan lại không nhịn được mà nghẹn đến rơi nước mắt.  Lần cuối chia tay, ai cũng lớn rồi, đều không khóc nữa. Chỉ còn mình Gôn, lúc chia tay vui vẻ tạm biệt nhau, đến tối lại lén mà khóc. Rồi Gôn lên lớp 3, được học bơi. Loan còn chưa kịp được bơi với Gôn nữa.</div>
+    <br>
+    <div class="line">Một thời gian không lâu sau, mẹ Loan không vừa mắt với Dì được, không chịu được tính cách của nhau nên quyết định không ở sát vách nhau nữa. Loan tiếp tục di cư.</div>
+    <br>
+    <div class="line">Trải qua nhiều thay đổi như vậy, lòng Loan cũng lạnh nhạt dần, phải tập học cách thích nghi với hoàn cảnh, vậy nên bao nhiêu tiêu chí trong học tập Loan đều gạt bỏ hết. Lúc đó Loan đã là một cái xác vô hồn, không màng thêm thế sự gì. Đi thi cũng là thi cho có, đều là những mục tiêu mình đặt ra trước đây, giờ đi thi lại với tâm thế phó mặc sự đời, dù sao tên bài thi cũng có chữ đánh giá, thôi thì năng lực bản thân đến đâu thì phô ra đến đó thôi. Cứ vậy Loan chẳng thèm ôn cho bất kỳ cuộc thi nào, ĐGNL, SAT, IELTS, rồi THPT. Nói thật dù kết quả không cao nhưng Loan không hổ thẹn chút nào, vì với công sức và thời gian mình bỏ ra thì con điểm đó đã là cao hơn kỳ vọng. Thứ duy nhất Loan hổ thẹn, chính là ước mơ của mình. Ngày đó Loan căm thù bọn muỗi ra sao, quyết tâm một ngày tìm được vaccin chống lại nó, quyết tâm trở thành bác sĩ để sau này có dũng khí không để bản thân đứng trước sự bất lực nào. Bây giờ ý chí đã nguội lạnh dần. Vậy mà Loan còn hứa với em mình sẽ là người tìm được vaccin cho bệnh sốt xuất huyết. Nỗi thù với bọn muỗi của Loan cũng vơi đi, Loan lấy tư cách gì mà thù nó chứ, từ đó Loan chẳng bao giờ đập thêm một con muỗi nào nữa.</div>
+    <br>
+    <div class="line">Từ lúc dịch vơi bớt, trường học lại bắt đầu cho đi học lại. Loan có được một chuỗi những ngày đi học 20 cây số. Dậy chuẩn bị và ngồi lên xe mẹ chở đi, lúc nào cũng trễ, nhưng luôn canh đúng sát giờ, mẹ Loan chạy hết tốc độ đến nơi chỉ tốn 20 phút. Quen dần, những ngày sau đó là tự chạy xe máy đi. Có một đợt, Loan cũng không còn nhớ tình huống gì, có vẻ ba  mẹ Loan bận đi xa đâu đó 2 tuần, không thể để Loan ở một mình trong vườn. Vậy nên Loan với mẹ đi quanh khắp nơi tìm chỗ thuê phòng, và lần đầu tiên Loan được thuê phòng tại chính quê hương của mình. Còn nhớ hồi nhỏ, mỗi lúc ba mẹ ly thân, chị Loan đều xúi mẹ đi thuê khách sạn ở, như một ước mơ nhỏ nhoi của chị nhưng chưa bao giờ thành thật. Giờ Loan được thuê rồi, cảm giác nó thú vị lắm. Lại còn được chung đường đi học với crush nữa.</div>
+    <br>
+    <div class="line">Nhà Hoàng Hiệu cứ vậy để trống, nhưng rồi mẹ Loan muốn mở tiệm buôn bán vì đam mê. Nên mở một tiệm thời trang bán túi xách các kiểu. Nhà Hoàng Diệu có lúc là chỗ tụ tập của tổ Loan, là cái nòi bơm bong bóng nước chơi ngày cuối năm. Và là chỗ tổ chức sinh nhật năm 18 tuổi của Duy Duy. Loan thường sống như một cái gương, chính là người đối diện giao tiếp với Loan ra sao thì Loan sẽ tự động đổi nết theo người đó. Thế nên Duy đối với Loan từ đầu đã chẳng có chút ngượng ngùng xa lạ gì. Vì nết Duy sẵn tửn tửn hay làm trò rồi. Không biết sao hôm đó Loan đã rất nhiệt tình hứng khởi mà tổ chức sinh nhật cho Duy. Thế là Loan với Quyên loay hoay cả buổi làm mấy món khoai tây, vì sở thích của Duy mà Quyên biết là nó. Trùng hợp là món yêu thích của Loan cũng là khoai tây luôn, nhưng mà là chiên. Cứ lần nào có Quyên sang chơi ba Loan đều làm một đống khoai tây chiên cho hai đứa ăn. Mà thật ra Quyên không thích khoai tây chiên như ba Loan tưởng. Tính ra sau này Loan quên mất là Duy thích khoai tây tới vậy luôn. Cứ vậy sau một buổi sinh nhật tự nhiên thân thiết hơn, có điều hai đứa cũng hông liên quan gì với nhau, nên cũng không nói chuyện gì chung nhiều</div>
+    <br>
+    <div class="line">Rồi đến ngày đi Sài Gòn học Đại học. Loan đến Đại học với tâm thế trải nghiệm hết tất cả những gì có thể ở Đại học Việt Nam, để mai mốt qua Mỹ chia sẻ cùng với chị. </div>
+    <br>
+    <div class="line">Chị Loan ở bển nhờ bạn giúp Loan tìm chỗ ở, thuê ở KTX mà nhờ đó, bao nhiêu duyện phận mới đến với Loan. Loan được gặp hai Thương. Và một sự tình cờ, Loan với Duy ở gần nhau.</div>
+    <br>
+    <div class="line">Loan vào lúc Thương bé nói chuyện điện thoại với mẹ đặc giọng Nha Trang, lúc đó có chút rén, vì sợ bạn này sẽ rất chảnh, haha. Còn ấn tượng đầu về Thương cao thì là một người đầy chững chạc, tính siêng năng rất giống chị Loan, mới năm nhất vừa chuyển tới đã lo đi làm rồi. Vì ngày Loan chuyển tới là ngày KTX còn chưa kịp khai trương, nó vừa xây xong. Nên mới bảo, Thương tiến thủ cỡ nào, bay từ Hà Tĩnh vô mà ngày đầu đã đi làm.</div>
+    <br>
+    <div class="line">Ngày đầu tiên đi gặp mặt ở Đại học, Loan lại đi trễ mất mấy phút, lơ ngơ không biết đường đi. Leo lên tới tầng 6 rồi, lại thấy bảng kiểu "Không phận sự miễn vào", Loan chậm mất mấy nhịp phân vân thì một bạn phía sau đến hỏi ở đây là tầng 6 đúng không, Loan gật gật, rồi bạn dứt khoát đẩy cửa đi lên, Loan cũng bẻn lẽn đi phía sau rồi theo bạn vào chung một phòng. Hai đứa mới biết là học chung ngành, thế là ngồi cạnh nhau, vì đến trễ nên ngồi cuối chẳng nghe rõ, hai đứa ngồi tám với nhau đủ kiểu, bàn về phim ảnh là nhiều. Và bạn đó là má của Loan - Tú Anh. Buổi thứ 2 gặp mặt, Loan cùng má hẹn đến chung ngồi với nhau. Lúc sau có 2 bạn đến trễ lẻn lẻn ngồi phía trước Loan với má. Cuối giờ bạn quay lại xin info hai đứa, thế là kết bạn. Hướng ngoại cỡ đó chỉ có Mai Hân, lúc đó đi cùng Mai Hân là Duyên. Khởi đầu cho một nhóm bạn Đại học vô cùng quý giá của Loan. Ngày đầu tiên đi học Loan đã vào nhầm phòng, nhờ có Mai Hân hướng ngoại, chủ động liên lạc, tìm Loan để ngồi chung, Loan mới biết mình nhầm phòng, lật đật đi về đúng lớp, lại còn quên ổ bánh mì. Rồi 4 đứa, với sự kết nối của Mai Hân, đã ngồi cùng nhau. Cuối giờ cùng Loan đi kiếm lại ổ bánh mì. Rồi đi ăn trưa với nhau, ăn xong lên lớp đợi vào tiết. Loan được mở mang tầm mắt về cuộc sống ĐH Y Dược, nguyên hành lang sinh viên năm lê thê như trại tị nạn. Tụi Loan cũng kiếm một chỗ đánh một giấc ngủ trưa. </div>
+    <br>
+    <div class="line">Vì mục tiêu là trải nghiệm cuộc sống Đại học nên là có bao nhiêu buổi casting phù hợp Loan đều đi hết. Đậu full không rớt cái nào luôn, nhưng chỉ chọn lại 2 nơi. </div>
+    <br>
+    <div class="line">Hội sinh viên là nơi mang lại cho Loan biết bao nhiêu là kỷ niệm luôn. Vòng 1 casting là cùng nhau chơi building, có 5 trạm, chia một nhóm 5 người được chia sẵn và phát vòng tay. Trạm cuối là ném bóng nước và tạt bột nhau. Vòng 2 chỉ còn 20 người, cùng nhau tổ chức một chương trình talkshow. Và vòng cuối là phỏng vấn. Trải qua bao nhiêu thời gian cùng mọi người làm việc và hoạt động, trong Loan dấy lên nhiều suy tư. Loan không nói với ai về kế hoạch du học. Nhưng những ngày cuối Loan suy nghĩ rất nhiều, bạn đầu tham gia là để có trải nghiệm, nhưng nếu đậu rồi sau này sẽ có rất nhiều trách nhiệm, nếu sau này Loan đi du học thì sẽ làm lỡ mất một thành viên trong Hội. Nên Loan đã quyết định chia sẻ với chị trưởng ban, và xin rút. Nhưng cuối cùng, mọi người lại giữ Loan lại và cho Loan đậu. Bảo rằng anh chị cũng đã cân nhác rất kỹ lưỡng và sẽ không để vì Loan sẽ rời đi sớm mà đánh rớt Loan. Thế là từ mấy trăm người, Loan thành 1 trong 5 người được lựa chọn.</div>
+    <br>
+    <div class="line">Những ngày tháng năm nhất Loan đã làm rất nhiều thứ. Loan cùng với Quyên đi trải nghiệm hết những nơi gọi là Sài Gòn. Loan với Quyên đi khám phá khắp nơi, tham gia đủ thứ. Loan cùng các bạn cũng dành rất nhiều thời gian đi ăn nè, rồi đi chơi. Loan còn tham gia văn nghệ trong lớp nữa, càng kết thân với các bạn trong lớp nhiều hơn. Càng thân cả đội văn nghệ cũng tạo ra nhiều trải nghiệm cùng nhau hơn, đi cổ vũ bóng đá, rồi tự tổ chức hoạt động đi chơi dã ngoại ở Đồng Nai.</div>
+    <br>
+    <div class="line">Loan nghĩ có lẽ Duy cũng có cùng những trải nghiệm như Loan, khi Duy đi làm, làm quen với mọi người, kết thân và có với nhau những trải nghiệm. Sau này đi học Tiếng Đức, quen thêm những bạn mới. Nhưng là, với tâm thế rằng, mình sẽ là người rời đi. Lại là một cảm xúc khó tả.</div>
+    <br>
+    <div class="line">Càng thân với mọi người, Loan càng không nỡ đi du học, tâm trạng luôn ủ dột vì nghĩ rằng sau này sẽ rời xa mọi người, sau này mình sẽ không còn là một phần ở nơi đây nữa. Mọi người cũng vậy, rồi tới một ngày Loan giữa Loan và mọi người có một tấm màn lớn vô hình ngăn cách, Loan mất đi sự kết nối với tất cả.</div>
+    <br>
+    <div class="line">Vậy nên có phải Duy bây giờ cũng đã trải qua những giai đoạn rât khủng hoảng, có phải Duy cũng rất nhiều sự lung lay đang diễn ra ở bên trong. Bên trong khuấy động càng nhiều, mình càng muốn làm lơ nó để làm tốt những chuyện trước mắt. Nhưng những biến động đó vẫn âm thầm diễn ra, đi du học xa nhà là một quyết định lớn, một biến đổi lớn.</div>
+    <br>
+    <div class="line">Loan hiện tại không thể tưởng tượng được những gì Duy đang đối diện. Duy lại chưa từng chia sẻ nó ra. Còn Loan là một người thụ động. Nó khiến Loan thấy khoảng cách giữa hai đứa mình cứ ngày một xa nhau hơn. Hôm Duy phỏng vấn, Loan rất trông đợi kết quả của Duy. Nhưng Duy im bặt mấy ngày liên, Loan còn tưởng Duy không đậu, Loan không quan tâm kết quả, Loan chỉ quan tâm đến việc sẽ là người được đi cùng Duy. Rồi Loan lo sợ có phải bản thân quá vô tâm không, là Loan không hỏi thăm Duy. Đến cuối cùng Loan lại bất lực không biết phải hành xử ra sao. Duy không chia sẻ với Loan về việc đậu, Loan cảm thấy vị trí của mình rất xa lạ.</div>
+    <br>
+    <div class="line">Là trí tưởng tượng của Loan bay xa vời. Hay vì Loan nhạy cảm quá. Loan của bây giờ không còn cố tỏ ra vui vẻ nữa.</div>
+    <br>
+    <div class="line">Có những lúc Loan thấy tụi mình rất chung cảnh ngộ.</div>
+    <br>
+    <div class="line">Lúc đi làm ở Ministop Loan bị ba mẹ phát hiện, Duy đi làm SuSuBao bị mẹ phát hiện. Rồi họ ngăn cấm, ban đầu là vì họ quan tâm, lo lắng, muốn tốt cho mình. Nhưng rồi không biết sao, họ bắt đầu xem mình như những đứa con hư. Bắt đầu lo sợ về về những đứa con ngoài tầm kiểm soát của họ.</div>
+    <br>
+    <div class="line">Sự mất tự do mỗi khi về quê</div>
+    <br>
+    <div class="line">Bảo lưu</div>
+    <br>
+    <div class="line">Đi du học</div>
+    <br>
+    <div class="line">Những gì năm cấp ba, cũng là sau này chiêm nghiệm lại Loan mới có được những cái nhìn tổng quát, mới nhìn ra được những biển đổi. Đối với những chuyện xảy ra gần đây Loan vẫn chưa dám dành thời gian để mà nghĩ về nó. Không dám đối diện với nó.</div>
+    <br>
+    <div class="line">Dù vậy, Duy lại là tấm gương khiến Loan phải đối diện với những thứ đó một lần nữa. Duy lại dấy lên trong Loan những cảm xúc chưa được gỡ bỏ. Chính là giữa hai đứa có quá nhiều điểm chung. Những dạo đây Duy cũng thay đổi rất nhiều. Duy ôm đồm nhiều thứ hơn. Cũng trở nên trưởng thành, bên ngoài lúc nào cũng vui vẻ, mạnh mẽ. Nó khiến Loan đau lòng vì cả quá trình đó lại không biết những gì đang xảy ra bên trong Duy, không nghe được cảm xúc Duy đang đối mặt. Duy cũng không chia sẻ gì nhiều, nhưng luôn có những gợi ý. Hoặc có lẽ chính Duy cũng là người chưa thể đối diện được với tất thảy, vì trước mắt còn bao nhiêu là việc. Cứ vậy Loan thấy khoảng cách của tụi mình bị đẩy ra xa phần nào.</div>
+    <br>
+    <div class="line">Loan sợ chia sẻ những lo toan của mình sẽ làm phiền mọi người</div>
+    <br>
+    <div class="line">Nhưng mà cũng không có gì, ai cũng có những lựa chọn</div>
+    <br>
+    <div class="line">Chỉ là, trong quãng thời gian Loan khủng hoảng và stress rất nhiều, Duy luôn là người bầu bạn với Loan. Duy khiến Loan cười đùa và giải tỏa rất nhiều thứ. Duy như những đốm sáng trong chuỗi ngày đen tối đó.</div>
+    <br>
+    <div class="line">Có rất nhiều tứ Loan tò mò về Duy. Điều j khiến Duy nghĩ đến những cái chết. Duy đang tổn thương ở mức độ nào rồi, từ năm nhất Duy đã bảo Duy hay nghe những âm thanh trong đầu. Dạo gần đây điều gì khiến Duy rối loạn giờ giấc đi ngủ. Loan có được phép chạm vào những thứ sâu thẳm đó không. Dạo này xung quanh Duy xảy ra nhiều chuyện, ông Duy qua đời sau mấy tháng Duy ở viện chăm ông, người nhà Duy cũng bệnh, chính Duy sức khỏe cũng không tốt. Loan lại không biết được những lúc đó cảm xúc Duy thể nào. Rồi những thay đổi của Duy nữa, chính là từ lúc Duy bắt đầu đi làm. Loan lại không thể là người ở bên cạnh Duy, như những lúc có Duy ở cùng Loan. Vậy nên chỉ biết bồng bột viết viết. Loan chia sẻ câu chuyện của Loan, có được đổi lại câu chuyện của Duy không?</div>
+    <br>
+    <div class="line">Lúc trước Loan luôn cho bản thân là người hướng lung tung, mọi người ai cũng bảo Loan là người hướng ngoại. Mãi đến sau này, Loan mới nhận ra, kể từ khi cả nhà cùng lên căn gác ở, Loan mới đi ra ngoài nhiều như thế, tham gia vào nhiều cuộc chơi như thế, năm lớp 8 là năm Loan bắt đầu đi chơi nhiều hơn, gặp gỡ bạn bè. Lớp 9 ăn chơi còn dữ nữa, lần đầu nói dối ba mẹ để đi chơi xa, đi tụ tập, karaoke nhậu nhẹt. Đại học cũng vậy. Một lần Loan chợt để ý, hóa ra khoảng thời gian Loan ra ngoài nhiều đến thế, không phải vì hướng ngoại, mà là vì hướng nội. Là vì ở nhà có quá nhiều người, khiến Loan ngột ngạt. Những ngày trong phòng trọ không có ai, mọi người về quê hết Loan rất thoải mái cắm rễ ở nhà, mọi thứ như thiên đường vậy. Và đúng như vậy đó, lúc ở KTX Loan luôn muốn ra ngoài để có không gian hơn, Duy luôn là người bầu bạn cùng Loan những lúc đó. Ở bên Duy lại rất thoải mái, Loan vẫn tự do sống trong Thế giới của mình, còn Duy sẽ là người khiến Loan cười không thôi. Duy siêu có khiếu trong khoản hài hước, lần đầu Loan gặp người như vậy. Tính cách của Loan mà nói, khi không vui sẽ không muốn gặp ai, vì sợ sẽ ảnh hưởng tâm trạng mọi người. Nên trước đây đối với những người bạn, Loan luôn để dành những lúc bản thân vui vẻ nhất đến gặp họ, những lúc không ổn, Loan sẽ trốn tránh. Thế mà gặp Duy, dù Loan đang mang tâm trạng ảo nề nhường nào, gặp Duy đều sẽ luôn vui vẻ, tràn đầy năng lượng. Khi hẹn Duy Loan không cần chuẩn bị thật nhiều về tâm trạng, cảm xúc, cũng không cần đắn đo suy nghĩ quá nhiều thứ. Có vẻ Duy luôn là người chuẩn bị những điều đó thì phải. Rồi thời gian đó, Duy luôn là bình nạp năng lượng của Loan. Hôm nào cùng Duy đi về đều tràn đầy năng lượng và thấy mọi thứ tốt hơn rất nhiều. Sở dĩ Loan trốn tránh tất cả mọi người, vì quãng thời gian đó bản thân thật sự không ổn, muốn ở bên cạnh người khác, phải gồng rất nhiều thứ, phải cố tỏ ra vui vẻ, nhưng nhiều lúc sự mệt mỏi khiến Loan không thể làm được điều đó nữa, con người Loan bắt đầu thay đổi rất nhiều, Loan cũng không muốn phải gồng để rồi sống giả dối chính mình. Thật tốt là đi với Duy, chẳng cần phải làm vậy, Loan thoải mái làm chính mình.</div>
+    <br>
+    <div class="line">Trong những ngày đen tối của khủng hoảng, trầm cảm, Duy là người vô cùng đặc biệt khiến mọi thứ tốt hơn.</div>
+    <br>
+    <div class="line">Loan cũng muốn được làm gì đó cho Duy, Loan cũng không để bản thân đặt kỳ vọng cao vào bất kỳ điều gì nữa. Chỉ là không biết những dòng như vậy có thể kéo gần khoảng cách của tụi mình lại được không. Bởi vì trong lòng Loan mà nói, dạo này luôn bất an về sự xa cách này. Sau này Duy đi du học, liệu Loan có mất thêm một tình bạn. Không phải vì khoảng cách địa lý. Mà vì sự xa cách về tâm hồn và những điều khác nữa. Loan lại là người không thích tám gẫu bằng nhắn tin, vì rất mau mất tập trung, để mà nhắn tin với một người mà nói, Loan vận nội công rất nhiều a, nào là trạng thái của đối phương ra sao, cảm xúc của câu này như thế nào, với mọi người đó là điều dễ dàng, không biết sao đến Loan lại khó khăn như vậy, việc nhắn tin ngốn của Loan không chỉ là thời gian mà là rất nhiều thứ khác. Những lúc mệt mỏi nữa. Vậy nên sau này dù không thể nhắn tin, nhưng Loan sẵn sàng cùng Duy gọi điện, Loan cũng có thể viết thư, rất nhiều thứ có thể làm cùng nhau. Loan không muốn gượng ép để níu giữ một tình bạn. Chỉ là, khi Duy cần ai đó, Loan sẵn sàng. Khi Loan cần ai đó, Duy cũng ở cạnh.</div>
+    <br>
+    <div class="line">Thật lòng mà nói, trước đây Loan viết cho Duy rất nhiều thư. Ở góc độ nào đó, sự hiện diện của Duy giúp Loan giải bày được rất nhiều thứ. Chỉ là Loan chưa từng gửi, vì Loan sợ mất đi sự an toàn. Loan không tự tin về chính mình, cũng rất sợ bị phê phán. Cũng sợ về sự bất định của chính mình.</div>
+    <br>
+    <div class="line">Bây giờ mình nên làm gì cho tình bạn của tụi mình đây</div>
+    <br>
+    <div class="line">Giai đoạn này Loan thấy rất bất an. Loan đang dần mất đi những người bạn. Do chính bản thân Loan đang muốn thu mình lại.</div>
+    <br>
+    <div class="line">Loan không muốn gọi điện cùng ba mẹ. Vì họ luôn hỏi mọi thứ và cố kiểm soát mọi thứ. Chính Loan biết họ đang quan tâm Loan, chỉ là không đúng cách. Nhưng Loan rất bất lực. Mỗi lần Loan kể cho ba mẹ chuyện gì, thì sau đó đều có những lời phê phán. Loan không ba hoa về chuyện gì đó, thì nhất định đối diện với vạn vạn câu hỏi như hỏi cung dò xét. Loan không tỏ ra bản thân đang sống tốt thì họ nhất định sẽ lo lắng. Loan không tỏ ra mình trật tự sống khỏe thì nhất định sẽ bị phê phán. Vậy nên để trò chuyện cùng ba mẹ là một thử thách đáng gờm. Ngoài những hôm Loan có thể chủ động kiểm soát cuộc trò chuyện, thì cũng có những hôm mệt mỏi không muốn gồng mình. Loan cũng muốn cùng ba mẹ tâm sự, nhưng điều đó sẽ chỉ khiến ba mẹ lo lắng và bất an.</div>
+    <br>
+    <div class="line">Tâm trí Loan bây giờ chứa đầy mảnh vụn cuả thủy tinh, như đang bị mấy mảnh vỡ đó cào xé vậy</div>
+    <br>
+    <div class="line">Từ nhỏ đến giờ Loan không biết chia sẻ là gì, không biết tâm sự là gì. Chưa bao giờ có cảm giác an toàn để làm điều đó. Mỗi lần mở cửa là những lần hối hận để rồi phải quay lại và khóa chặt cửa hơn.</div>
+    <br>
+    <div class="line">Giờ giấc ngủ của Loan đã rối loạn từ lâu. Đến giờ cũng chưa từng ổn định lại. Loan cũng không thể trả lời với ba mẹ những cuộc gọi nhỡ của họ là lúc Loan đang ngủ. Lúc thức thì lại chẳng có cơ hội mà gọi nữa.</div>
+    <br>
+    <div class="line">Dạo đây Loan cũng dần buông thỏng hơn, tại sao phải ép bản thân phải vào guồng sinh học chứ. Tại sao phải tự trách bản thân mình. Cứ để mọi thứ theo trật tự nó muốn đi. Khi nào ngủ được thì ngủ, còn không ngủ được thì cứ tha hồ rơi vào suy tư của mình. Quan trọng là phải thức đúng giờ. Rồi tính sao thì tính.</div>
+    <br>
+    <div class="line">Mọi việc xảy ra trước đây, đều luôn để lại bóng tâm lý thật lớn.</div>
+    <br>
+    <div class="line">Loan bây giờ sống không tốt</div>
+    <br>
+    <div class="line">Từ ngày được chuyển ra trọ riêng. Loan như được bước vào vùng trời của riêng mình. Tự do thoải mái bày tỏ tâm trạng, cảm xúc. Như bù đắp cho những ngày trước đây, đêm nào Loan cũng nằm khóc, lần đầu Loan được khóc trong những âm thanh mình tạo ra, mà không phải trốn dưới những cơn mưa, trùm áo mưa kín mít rồi len lẩn vào dòng người. Thành ra mỗi đêm như vậy, Loan lại ước có người ở bên cạnh, rồi Loan lại thầm cầu nguyện có một anh người yêu. Nhưng không cần mấy, thật ra những con gấu bông bên cạnh đã rất tốt rồi, chỉ là thiếu chút chút hơi ấm. Loan đều là khóc không cần lý do, chỉ cần là được giải tỏa, Loan chỉ cần vậy thôi, chẳng cần tìm kiếm một lý do nào. Dù sao thì, chuẩn bị cho cuộc sống mới có rất nhiều việc. Nhưng được giải tỏa vào mỗi đêm, khiến mỗi ngày của Loan đều rất tốt. </div>
+    <br>
+    <div class="line">Rồi lại đến kỳ học quân sự, sống cùng 20 con người trong một căn phòng, Loan lại mất đi khoảng riêng tư. Mọi cảm xúc không được giải tỏa nữa. Có những ngày cố khóc trong im lặng, đều là mất ngủ mấy đêm liền. Nhưng coi như nhưng hoạt động ban ngày giúp ích cho một chút. Có thêm những người bạn mới, cùng nhau trải qua biết bao nhiêu chuyện. Loan được đi quân sự tận 2 lần. Loan siêu thích được sống kỷ cương nề nếp như trong này, Loan rất thích môi trường quân đội, mọi người than vãn về những sự khắt khe. Riêng Loan lại chưa hài lòng sự khắt khe đó, Loan ước được kỹ cương hơn nữa. Càng khó khăn, mệt nhọc, Loan càng thích. Có mấy lúc phải nhịn xuống sự phấn khởi trong mình khi bị phạt, chẳng lẽ lại vừa leo 10 lần 5 tầng cầu thang giữa đêm, vừa cười khúc khích được, đúng không. Những người bạn mới và những trải nghiệm mới khiến Loan rất phấn khích.</div>
+    <br>
+    <div class="line">Rất nhiều tín hiệu mới đến, nhiều kết nối mới, nhiều niềm vui mới, làm Loan chìm trong sự vui vẻ đó. Loan biết bản thân cần tìm cách giải tỏa cảm xúc, nhưng rồi Loan không làm được nữa, khóc không được nữa. Cứ như vậy, dù về nhà rồi, Loan cũng không khóc được nữa, cũng phải, mọi thứ đều quá tốt.</div>
+    <br>
+    <div class="line">Đến tuần thứ 4 khi đi học ở trường, học Tiếng Anh đầu vào, mọi thứ trong Loan bắt đầu sụp đổ. Chính Loan cũng không biết được nó bắt đầu từ khi nào, nó cứ vậy ập đến, cơn khủng hoảng. Ban đầu Loan tự nhủ, có lẽ do kỳ kinh nguyệt đến, cảm xúc thất thường, bụng đau, lưng đau, sức khỏe sút như rớt từ trên cao xuống. Năng lượng như bị một thứ gì đó rút cạn. Loan tự hỏi những bông hoa khi ong đến hút mật, nó sẽ cảm giác ra sao. Không biết bông hóa cảm nhận điều gì, nhưng chính Loan cảm thấy như là bông hoa đó, bị một con ong hớp từng chút, từng chút một, rồi hút cạn. Mọi thứ mệt mỏi như muốn ngất đi, nhưng lại không ngất được. Bây giờ khóc cũng không được nữa, không có sức. Từ hôm đi Quân sự về, trong đó có dịch, Loan tự nhủ có phải vì ốm mấy hôm mà hệ đề kháng yếu đi rất nhiều không. Nhưng lại bất lực không biết bồi bổ cho cơ thể này sao nữa. Cứ cố qua ngày qua ngày. Hôm đó sốt, Loan có lý do cho mình nghỉ học một hôm rồi, thế mà lơ là sao, cầm điện thoại lên mà quên xin phép, ngủ quên một giấc dài. Đến khi tỉnh dậy thì tự trách bản thân trầm trọng, đầu óc bí bách khiến Loan chỉ thấy bản thân rất tệ rất tệ, lại như trước đây cứ vậy cúp học, Loan lại còn ghost tin nhắn hỏi thăm của một bạn trong lớp. Đến hôm sau lại không biết đối diện như thế nào.</div>
+    <br>
+    <div class="line">Cũng không biết mọi thứ diễn ra thế nào, cái khủng hoảng đó nó ập đến. Loan thấy có lỗi với tất cả mọi người, thấy hổ thẹn, thấy tự trách. Lại nữa rồi, lại một tấm màn phủ lên bầu trời của Loan, mọi thứ ngoài kia đều cách một tấm màn, Loan lại không kết nối được với mọi người. Mọi người càng yêu thương Loan, càng lo lắng, Loan lại càng cảm thấy nặng nề, nặng nề, mọi thứ lại nặng nề.</div>
+    <br>
+    <div class="line">Loan lại quyết định cúp học thêm một hôm để giải quyết những thứ bên trong mình, để tự hỏi rút cuộc bản thân đang bị gì. Đứng trước những dòng tâm sự, Loan mới một lần nữa khóc nấc lên. Khóc từ sáng đến tận đêm khuya. Từ hôm đó, mọi thứ tốt trở lại, Loan đi học lại bình thường cảm thấy tốt với mọi thứ. Từ lúc đi học, có rất nhiều bạn tán Loan, có một bạn nam trong lớp ngày nào cũng cho Loan kẹo, bạn nữ tán Loan ngày nào cũng tặng Loan đồ ăn. Loan cũng không biết sao mình lại nhận nữa, nhưng cảm thấy rất tốt, chính là bản thân mình xứng đáng mà đúng không. Rồi ghép nhóm, lại thêm những em khác thích Loan, luôn bắt chuyện và bày trò làm Loan vui. Mấy bạn đó trên lớp cũng rất năng nổ, phát biểu rất nhiều. Mấy ngày đầu Loan cũng hăng phát biểu, về sau lại thấy vô cùng tự ti, lại không biết bản thân phát biểu làm gì. </div>
+    <br>
+    <div class="line">Qua một tháng, kỳ kinh lại đến, kinh nguyệt Loan không đều, vốn rất tự dung tự đắc thích đến khi nào thì đến, nếu đúng chu kỳ thì 2 tháng lại một lần. Nhưng kể cả tháng nó không đến, thì những cảm xúc mà nó mang đến vẫn cứ xuất hiện. Loan lại đa sầu đa cảm, lại nhạy cảm, tiêu cực mọi thứ, nó cứ vậy đến một lần nữa. Loan bất lực cực kỳ, chẳng lẽ tháng nào bản thân cũng phải như thế. Loan biết bản thân phải bồi bổ phải tìm cách thoát ra nó, nhưng lại bất lực vô cùng, thôi thì ráng. Rồi khủng hoảng ập đến, có những niềm tin bị đổ vỡ, có những kỳ vọng những định hướng, đổ vỡ. Cảm thấy bản thân đúng là bị hoang tưởng rồi, thật nực cười, Thảo Loan ạ. Nó đến, đánh sụp mọi thứ, Loan bắt đầu tự ti về tất thảy. Rồi em thích Loan xem giấy sức khỏe, biết Loan 2004, bắt đầu gọi Loan là chị, muốn bắt chuyện với Loan, hỏi Loan thời gian qua đã làm gì, có học thêm gì mới không, mọi thứ. Loan rơi vào những sự tiêu cực tự mình tạo ra, thấy thất vọng về bản thân trầm trọng. Cứ vậy, cứ vậy, Loan không dám đến lớp, trốn chui trốn nhủi ở nhà. Một hai hôm đầu nghỉ học, rồi một hai hôm cố gắng vực bản thân đứng dậy, rồi lại gục xuống. Vì cố giữ kết nối với Thương Thương, tuần nào Loan cũng đi đi lại lại, Loan còn học lớp Piano ở Quận 1 nữa. Cứ vậy tự bào mòn sức lực. Hôm đó Thương qua ở lại và nhờ Loan quay bài tập, Loan lại cúp học. Ban đầu là lớp Tiếng Anh, về sau cúp cả lớp võ. Cho đến một ngày, không còn slot để Loan được phép nghỉ nữa, Loan cứ cho rằng bản thân sẽ từ đó mà có động lực vực dậy bản thân. Có đâu mà ngờ, Loan lại vô hồn, hôm đó xách xe đi rồi lại không đến trường, cứ vậy vẩn vơ khắp ngỏ đường. Hết rồi, tất cả chấm hết rồi. Loan cứ vậy mà vi phạm, thi cũng không được nữa, kết thúc rồi. Bây giờ Loan đã chai sạn, cảm thấy bản thân chính là không đáng sống nữa, vậy mà vẫn chai lì với tất thảy, dửng dưng với mọi thứ, thôi thì ngã thì lại đứng lên, Loan à, mày không cần sống tốt, mày chỉ cần bước đi thật xa. Phải nghỉ đến ba mẹ.</div>
+    <br>
+    <div class="line">Vậy mà Loan vẫn vậy sống tiếp như thường, không một ai biết cả. Luôn tỏ ra mình sống rất tốt trước mặt ba mẹ, rồi hia Thương, rồi Duy. Vẫn luôn diễn mình vẫn sống cuộc sống đi học hằng ngày. Dù sao Loan cũng quen rồi. Đứng lên đi Loan, đi tiếp nào. Và đi tiếp.</div>
+    <br>
+    <div class="line">Thứ bóng tâm lý để lại trong Loan, là gì vậy. Loan vô tình biết đến Rối loạn nhân cách né tránh, chỉ có nhờ nó, Loan mới có thể giải thích cho hành vi của chính mình, cho những gì đang xảy ra trong cuộc sống cảu mình. Loan sợ bất kỳ kết nối nào thân mật mới, mọi người càng quan tâm Loan, càng muốn đến gần hơn. Loan lại càng áp lực, càng muốn đẩy họ ra thật xa.</div>
+    <br>
+    <div class="line">Không sao, giờ tốt rồi, Loan thi bằng VSTEP, nộp vào và tiếp tục đến trường như thường. Bị đưa vào diện bỏ học tự nguyện, phạt mất 2tr3. Nhiều lúc Loan ước, giá như ba mẹ cho Loan được mở lòng, Loan sẽ không cần giấu diếm rồi một mình trải qua mọi thứ. Là một mình, chỉ có một mình, không còn một bất kỳ ai. Loan đã trốn tránh rồi, trốn né Trúc, trốn né mọi người. Trốn tất thảy tất thảy.</div>
+    <br>
+    <div class="line">Loan cũng đã đẩy hai Thương ra xa. Trong một lần dồn nén, Loan tổn thương, và rồi khiến họ cũng tổn thương theo Loan. Và rồi ...</div>
+    <br>
+    <div class="line">Có phải rồi đến một ngày, Loan cũng làm điều tương tự với Duy. Duy là người còn duy nhất ở lại.</div>
+    <br>
+    <div class="line">Những người bạn rất quý giá của Loan. Những người bạn cấp 3, vì sự ngột ngạt và vì nhiều thứ, Loan trốn tránh họ. Rồi những người bạn Đại học, vì cái bóng áp lực mà nó mang lại, Loan cũng không dám gặp họ nữa, mọi người cũng không có thời gian chung.</div>
+    <br>
+    <div class="line">Với Quyên mà nói, nhiều lý do đến không tả nổi. Nhưng lý do khiến Loan quyết định rời đi, là trong thời gian đó, có những thứ Loan không còn kiểm soát được, Loan nói những lời tổn thương đến mẹ, làm những hành động khiến mẹ lo lắng. Loan sợ bản thân sẽ làm như vậy đối với Quyên, nên quyết định rời xa ra, khoảnh khắc nhắn những lời đó, không biết sao lại nhẹ nhỏm vô cùng. Với Loan trong khoảng thời gian đó mà nói, dù Loan rất cố gắng cố gắng, nhưng cứ vậy, dù không cố ý vẫn bất lực mà làm tổn thương người xung quanh. Khiến Loan không nhịn được, khi nhìn Quyên đang cố tình làm mọi người xung quanh tổn thương. Quyên biết Quyên cố tính khiến Duy buồn. Nó xuất phát từ những tổn thương bên trong Quyên. Loan luôn biết điều đó. Nhưng vẫn là không chịu được chứng kiến hiện thực đó nữa. Loan không biết liệu Quyên hiểu được bao nhiêu phần về mình, khoảng thời gian đó Loan luôn thấy có lỗi với người, bất lực vô cùng, vốn dĩ bản thân chẳng làm gì, chỉ là một mình chui vào vỏ ốc của mình, vậy mà cứ mang tội lỗi ghost hết người này người kia, mang sự hổ thẹn về sự vô tâm của mình. Bấy giờ Loan đã mệt mỏi cho bất cứ hành động gì, Quyên nhờ Loan đặt vé xe, Loan không tin Quyên không biết đặt, Loan biết đó chỉ là một hành động để Loan có cơ hội quan tâm bao bọc Quyên, chỉ là Loan đã dặn bản thân đừng gồng mình nữa, vậy mà cứ vậy mà gồng mình lo cho người khác. Để rồi lại mắc sai lầm, Quyên trách Loan trách Loan, Loan lại ôm trong mình sự tội lỗi, rồi Loan cảm thấy, bao nhiêu tâm tư của mình đều bị xem thường, Loan cân nhắc kỹ lưỡng từng tí một đặt vé trễ nhất của hôm đó rồi. Lại liên tục nhận những lời trách móc, rồi lại phát hiện ra bản thân mắc lỗi lớn, đặt nhần ngày cơ, là T3 không phải ngày 3, cứ vậy mà nhầm. Rồi bị bạn dỗi rồi. Từ đầu Loan đã bảo Quyên tự đặt rồi, sao Loan cứ liên tục lần này đến lần khác ôm trách nhiệm về mình, nhưng rồi lại liên tục mắc sai lầm. Cả một năm nhất của Loan là những chuỗi lặp như thế, không, là cả cuộc đời Loan mới đúng. Không phải QUyên làm bạn với Loan rất lâu sao, không phải Quyên là người hiểu rõ nhất Loan nhạy cảm với những lời phê phán ra sao sao. Đến giờ đây mọi hành động của Quyên ép Loan thấy tội lỗi ruồng đầy mình, thẹn quá hóa giận. Cứ vậy Loan buông bỏ một người bạn, bao nhiêu trách nhiệm cùng được dứt ra, mới thấy được nhẹ nhỏm đến lạ. Chỉ là Loan ghét bản thân mình, dù chẳng cố ý, chính là bản thân không làm gì cả, không làm gì bằng nghĩa đen cơ, cứ vậy khiến mọi người bị đẩy ra xa, làm tổn thương người xung quanh. Loan rất mệt mỏi, rõ ràng chẳng làm gì cả, chỉ là mệt thôi. Loan nhận ra sự không mở lòng của mình bắt đầu lộ ra tác dụng phụ của nó. Chỉ có điều, sau mỗi lần rút ra bài học như thế, Loan cố gắng học cách mở lòng, để liên tục phát hiện mình từ lâu đã không biết cách rồi. Vốn dĩ bức tường thành và những cánh cửa Loan xây lên đều có lý do của nó. Mặc dù, qua bao lần nó cản trờ Loan với Thế giới bên ngoài, nhưng nó là hàng rào bảo vệ mà tiềm thức của Loan qua bao nhiêu bài học đã xây dựng nó cho Loan. <br>
+    <br>
+    <div class="line">Duy bây giờ đang mang trong mình tâm trạng gì? Đang sống ra sao? Mọi thứ có tốt không?</div>
+    <br>
+    <div class="line">1 tháng nữa là Duy đi rồi, nó sẽ là cảm xúc như thế nào chứ</div>
+    <br>
+    <div class="line">Loan bây giờ chỉ muốn gột sạch mọi thứ. Tiếp tục mà không để nhưng kỳ vọng chạm đến mình. Khát khao được làm chính mình, được lắng nghe chính mình, được hiểu rút cuộc mình là ai. Bây giờ lại tiếp tục cuộc sống mới, Loan đã không còn vì ai mà cố gồng mình nữa. Không phải, là cố gắng không để bản thân mình như thế. Có những thứ bên trong mỗi người như được lập trình sẵn vậy, dù không muốn nhưng bản thân vẫn cứ vô thức làm theo. Loan có thể tự mình lập trình lại mình không chứ. Không biết nữa.</div>
+    <br>
+    <div class="line">Thật lạ, viết nhiều như vậy Loan lại chẳng có cảm xúc gì trong mình</div>
+    <br>
+    <div class="line">Loan chính là cảm thấy như bây giờ rất tốt, xem như là buông bỏ mọi thứ</div>
+    <br>
+    <div class="line">Có một thứ khiến Loan dao động, là vị trí của Loan trong Duy, là vị trí của Duy trong Loan</div>
+    <br>
+    <div class="line">Đã viết nhiều thư như vậy, đều không dám gửi</div>
+    <br>
+    <div class="line">Chỉ có trong trạng thái như bây giờ, Loan mới vô thần mà mặc kệ mọi thứ, mặc kệ vùng an toàn của mình, mà viết nó cho Duy</div>
+    <br>
+    <div class="line">Và giờ Loan có dám gửi không đây, Loan cũng không biết</div>
+    <br>
+    <div class="line">Duy đọc được thì có câu trả lời rồii</div>
+    <br>
+    <div class="line">Loan cảm thấy bản thân rất ngốc, chỉ khi tưởng tượng có người đang lắng nghe, mới trút ra suy nghĩ của mình, từ khi nào mà Loan đã không dành những lời đó cho chính mình. Từ khi nào mà Loan luôn biết ơn những người quan tâm Loan, để Loan tưởng tượng ra những cuộc trò chuyện với họ, để được hiểu mình. Loan chính là ghét bản thân như vậy, bộ nói với chính mình lại không được sao, giờ thì được rồi, mọi thứ là Loan nói cho chính mình. Không còn như hệ thống được lập trình nữa - mỗi khi nói gì làm gì đều cố đứng vào vị trí của người ta cảm nhận về mình. Làm vậy thật mệt mỏi, mệt hơn chính là nó cứ vô thức mà diễn ra, không muốn vẫn cứ vậy, khiến Loan trước mặt bất cứ ai đều không được là chính mình. Phải, chỉ khi được ở một mình, Loan mới tự do làm chính mình. </div>
+    <br>
+    <div class="line">Trầm cảm cũng tốt, trầm cảm cho phép Loan buông bỏ những kỳ vọng, những trách nhiệm, những ràng buộc. Loan luôn cố sống để không để chính bàn tay bản thân làm người khác tổn thương. Bây giờ cũng không còn sức mà gánh vác. Được là chính mình dẫu có thể cái tôi đó khiến người bên cạnh tổn thương.</div>
+    <br>
+    <div class="line">Loan đang nói gì vậy</div>
+    <br>
+    <div class="line">Câu chuyện này khi nào kết thúc ha</div>
+    <br>
+    <div class="line">Mà Loan cũng chưa có mail của Duy</div>
+    <br>
+    <div class="line">Hôm bữa đã cố cầm đống hồ sơ lên mà kiếm rồi, đầu óc ngẩn ngơ lại quên mất</div>
+    <br>
+    <div class="line">Thế thì đống này có đến Duy không</div>
+    <br>
+    <div class="line">Cũng không quan trọng</div>
+    <br>
+    <div class="line">Quan trọng là sự hiện diện của Duy đã giúp Loan trút ra rất nhiều điều, không chỉ là lần này</div>
+    <br>
+    <div class="line">Cũng giống như lần trước</div>
+    <br>
+    <div class="line">Hôm đó là sinh nhật năm ngoái của Loan, rơi vào giai đoạn đang rất không ổn của Loan. 00h 25/05/2024, Loan được gọi dậy trong giấc ngủ được 1 tiếng đồng hồ, và đón sinh nhật năm 20 tuổi với những người bạn cùng phòng của mình. Thật hay, cả trong một phòng 4 người Loan vẫn có thể lén khóc, trước đó, là vùi mình vào gối len lén khóc rồi ngủ thiếp đi. Thức dậy là một sinh nhật bất ngờ với bánh kem, snack và nước ngọt. Sau đống calo đó thì cũng không ngủ lại được nữa, 7h Loan ra ngoài và cứ đi. Cũng không biết cuộc hẹn với Duy và Quyên Loan có còn sức không nữa, lỡ lại kiệt sức rồi lại bất lực nằm lăn dài giống hôm bữa, lỡ lại làm mọi người tụt mood. Loan lang thang đến chỗ Duy, đánh một bát phở, rồi Loan đến Vạn Hạnh Mall, xem phim Xa kia nơi loài tôm hát, rồi lại chui vào box hát. Thấy mình không ổn, thực sự không ổn, Loan nhứ rớt vào đường cùng không biết phải cứu bản thân ra sao. Đúng, cứu, Loan nên tìm ai đó cứu mình, sau nhiều lần dự định rồi thôi, sáng đó Loan quyết định tìm đến phòng khám, cái mà chỉ tốn 300k thôi. Loan chui vào thư viện ở Vạn Hạnh Mall, kiếm cho mình một góc thoải mái, đặt lịch. Lịch khám là 14h, lúc đó còn sớm, Loan ngồi nghĩ nghĩ tới đó biết nói những gì với bác sĩ đây. Cứ vậy rồi rơi vào guồng suy tư của mình, Loan nhìn lại mọi thứ, nhìn những gì đã xảy ra ở Đại học.</div>
+    <br>
+    <div class="line">Đúng vậy, khám tâm lý không giúp ích gì, cùng lắm chỉ là hỏi loa qua mấy câu, cứ hỏi cứ hỏi, chỉ cần trả lời có/không, trong phút chốc nó khiến Loan thấy tệ hơn vì thất vọng với kiểu khám này. Loan cùng lắm chọn một loại thuốc trong đống bác sĩ kê, thứ thuốc không quá gây sự phụ thuộc cũng ít tác dụng phụ, Loan ghét thuốc tây, nhưng phải tìm một thứ cứu rỗi mình thôi. Nhưng không sao, từ đầu Loan đã biết, thứ quan trọng không phải là bác sĩ, vẫn là tự bản thân mới cứu được chính mình, nhưng sự hiện diện của người bác sĩ, trong một buổi khám tâm lý buổi chiều. Đã khiến Loan chịu ngồi lại nhìn lại tất cả mọi thứ trong một buổi sáng.</div>
+    <br>
+    <div class="line">Bao nhiêu chuyện xảy ra khiến Loan luôn tự trách và áy náy, lúc đò nhìn lại, mới tha thứ dần cho bản thân. Là bản thân Loan quá ôm đồm nhiều thứ mà không nhận ra. Những câu hỏi luôn hiện ra tại sao bản thân lại liên tục đi muộn, tại sao lại cắm đầu lướt Tiktok trong vô hồn liên tục vậy, tại sao lại làm không tốt, tại sao bản thân lại vô trách nhiệm như vậy, tại sao lại không có tí động lực nào, tại sao bản thân lại như vậy chứ, tại sao trước đây bản thân rất buồn trước những con điểm giờ đây lại vô cảm như vậy, tại sao tại sao? Nhưng lại dùng nó để tự trách cứ, chính là thấy bản thân vô cùng tồi tệ trong mọi sự. Mà lại chưa từng đi tìm câu trả lời lần nào. Giá như Loan đi tìm câu trả lời từ sớm, biết bản thân lúc đó không tệ hại đến như vậy, để biết được bản thân đã trải qua những gì. Chỉ giỏi nhất là tự trách bản thân, ôm tội lỗi mà không cho mình cơ hội sửa chữa, lúc nào cũng thấy có lỗi, có lỗi. Làm được gì chứ, cuối cùng vẫn là để mọi thứ chết ngộp, rồi bản thân mình buông xuôi, né tránh tất thảy, ghost hết tất cả mọi người, mọi thứ trên bờ vực sụp đổ, đến không còn đường thoát cho bản thân, lúc đó chính là phải biến mất khỏi Thế giới này mới được giải thoát.</div>
+    <br>
+    <div class="line">Cả một quảng thời gian dài Loan luôn sống trong sự lo sợ về sự vô thường. Sống trong sự lo sợ sợ cứ vậy một ngày bất chợt ba rời xa mình. Anh Loan xem bói, ác lắm, nhưng hóa ra lại nói không sai. Cũng không biết sao ông trời cố ý để Loan vô tình nghe cuộc nói chuyện cảu họ, là những câu về năm hạn đó của ba Loan, là lời khẳng định chắc nịt về cái chết. Rồi nó cứ ngày ngày cào xé tâm trí Loan. Loan lơ lửng trong một không trung nơi ký túc xá, một cảm giác mất hết trọng lực, thật khó thở, xung quanh đen tối mịt mù. Loan tự hỏi mình ở đây là gì, tự nhiên cứ có một Loan ở đất Sài Gòn bon chen mọi thứ, là để làm gì vậy, tại sao kẻ Loan này không ở quê nhà cùng ba mẹ mình, tại sao nhất định lại ở đây. Sao thên thể lại lửng chửng, tại sao vào những thời điểm quan trọng Loan đều kẹt lại với hoạt động của hội, lịch học của trường, lịch đi dạy. Mọi thứ ập đến, bản thân chẳng biết mình đang ở đây làm gì nữa, nó cứ sụp đổ, sụp đỗ. Rồi cũng không biết từ khi nào, Loan đã chuẩn bị sẵn sàng về bát kỳ sự vô thường nào. Loan mơ một giấc mơ ba mình treo trên thánh giá, nhẹ nhàng hôn lên trán ông, nhẹ nhàng chấp nhận mọi thứ. Loan hận chính mình, Loan chỉ muốn dành nhiều thời gian về quê thôi.<br>
+    <br>
+    <div class="line">Năm nhất Đại học quá tham lam nhiều thứ, hoạt động của Hội, hoạt động của lớp. Lúc đó, vào khoảng cuối năm, ba Loan mắc phải sốt xuất huyết, căn bệnh lấy đi tính mạng của em Loan. Loan lại lao đầu vào những hoạt động, đi dạy kiếm tiền. Để một mình mẹ lo lắng chăm sóc ba, đến độ ba nặng đến mức dường như không qua khỏi, Loan thì lại không biết gì, chỉ khi sau này mẹ kể lại, Loan mới biết mẹ Loan đã một vợ một chồng tự mình xoay sở ra sao. Loan không làm chỗ dựa cho mẹ lúc đấy, lại không có được thời gian trống mà quay về. Thứ Loan làm chỉ là sụp đổ rồi bất lực, Loan luôn ước bản thân thật mạnh mẽ để làm chỗ dựa cho mọi người, thế mà càng lớn, Loan chỉ càng ngày càng yếu đuối. Nếu không phải may mắn, nhờ sự quản giao và mối quan hệ của mẹ, đã không tìm được bác sĩ tốt giúp ba Loan qua khỏi. Loan thì thật không biết bản thân đã vô cảm đến mức nào, lúc đó nghe thấy ba từ sốt xuất huyết, trong đầu Loan chỉ toàn nỗi căm hận, rồi đi sâu vào chuỗi tự mắng nhiết bản thân. Loan cứ vậy trốn tránh, nên cuối cùng mới là để mẹ một mình lo liệu tất thảy, rồi nghe tin ba khỏe lại, trong cả quá trình đó, Loan ngoài lo lắng vô ích thì đã không làm được việc gì, kể cả sắp xếp thời gian về quê. Vốn dĩ với y tế hiện tại đã có thể cứu rất nhiều ca, chẳng qua, nếu muộn một chút sẽ khó mà cứu được. Năm đó em Loan không may, nơi đầu tiên xuất huyết lại là não. Gôn trong bữa ăn, đã nói với bố mẹ là mắt mình chỉ thấy toàn lửa, trước đó là những cơn sốt. Đến lúc đến bệnh viện thì lọc máu bao nhiêu lần cũng không giúp được gì. Gôn nói với mẹ "Con không muốn như vậy".</div>
+    <br>
+    <div class="line">Một lần nữa vào học kỳ hai, mẹ Loan bất ngờ gửi một tấm hình đầy máu của ba. Loan lúc đó, không biết được đang nghĩ gì, Loan sợ hãi, Loan không muốn đối diện, Loan không đặt mình vào mẹ lúc đó đang hoảng loạn ra sao. Nhìn hình và sau đó là những cuộc gọi tới, Loan trơ mắt nhìn mà không dám bắt máy. Loan tự trách, rồi sang trách mẹ, trách tại sao mẹ lại không bảo vệ Loan khỏi những lo toan, tại sao lại khiến Loan phải đau khổ như vậy, tại sao lại gửi bức hình đó cho Loan? Tại sao Loan bấy giờ lại không bắt máy của mẹ? Loan không biết bản thân đang bị gì nữa, cứ nhìn từng cuộc gọi nhỡ hiện lên. Đến cũng chịu thua chính mình.</div>
+    <br>
+    <div class="line">Năm nhất ngoài hoạt động Trường, lớp, học tập, đi làm. Loan còn chuyển nhà, Loan là người đứng ra làm mọi thứ, từ nhỏ đã vậy, dù lên Đại học Loan đã để bản thân bớt chịu trách nhiệm lại rồi, né chức ban cán sự, né việc làm nhóm trưởng. Vậy mà cứ vô thức vô thức tự tìm cho mình những thứ khác mà ôm đồm.</div>
+    <br>
+    <div class="line">Thật ra mà nói, thứ khiến Loan sụp đổ, là sự lý tưởng hóa của mình. Là những chuỗi ngày không để bản thân nhìn lại và giải tỏa. Loan luôn lý tưởng hóa mọi thứ, luôn nhìn mọi thứ trong một màu hồng.i</div>
+    <br>
+    <div class="line">Từ nhỏ Loan đã không đỡ đần ba mẹ được gì mấy, họ cãi nhau chỉ biết đứng ngoài âm thầm chịu đựng. Nhiều lúc, Loan chỉ biết tỏ ra thật tốt để ba mẹ không to toan về mình, diễn rồi lại diễn, nhiều lúc cũng không biết mình đã diễn thật tệ hại. Cái ngày ba làm việc có lỗi với mẹ, mẹ nhất quyết ly hôn, ba Loan cố gắng níu kéo. Cuối cùng cả nhà cùng nhau đi ký giấy chuyển nhượng, chuyển nhượng mọi thứ lại cho Loan và chị, để giữa hai vợ chồng không có những ràng buộc, để ba Loan nhận ra thứ níu họ lại đã chỉ còn lại sợi dây mỏng manh, cũng nhờ vậy nên ba mới thay đổi rất nhiều và yêu thương vợ hơn. Những ngày đó, miệng Loan liên tục cùng mẹ nói ra những lời, con không buồn, nói rằng Loan rất phấn khích, tìm kiếm những niềm vui nho nhỏ. Từng chữ ký ký lên trên giấy, cảm xúc Loan không thể nào tả được, trên mỗi vẫn cứ nở nụ cười, đêm về ngủ cùng gia đình chẳng thể nào giải tỏa. Loan luôn tắm sau cùng, luôn đợi mẹ, chị xong xuôi, mới tới lượt mình, vì nhà tắm là nơi duy nhất bản thân Loan có được sự riêng tư. Loan ở trong đó cả tiếng, có khi hai tiếng. Nó luôn là bạn của Loan bất kể giai đoạn nào trong cuộc sống. Lúc nào cũng vậy, lúc nào Loan cũng đã cố gắng tỏ ra mình ổn, nhưng chưa bao giờ làm tốt nó, mẹ Loan vẫn luôn vì Loan mà chịu đựng đến bây giờ. Loan thương ba như vậy, ba Loan lại chăm Loan kỹ như thế. Mẹ Loan lại không biết, mẹ vốn không cần vì Loan mà, họ thật sự vẫn còn rất thương nhau mà phải không, Loan giữ họ lại, Loan tin vào hôn nhân đó. Chỉ là làm ơn đừng để Loan trở thành gánh nặng, có ly dị cũng chẳng sao. Loan vẫn sống cuộc đời của mình, họ vẫn sống cuộc đời của họ. Nhưng như vậy có thật sự tốt cho ba mẹ không, người trong cuộc không thấy, người ngoài cuộc như Loan lại thấy họ chính là không thể thiếu nhau, mỗi người đều đỡ đần nhau trong mặt nào đó. Loan không biết, nhiều lúc Loan hận mẹ tại sao luôn nói ra những lời, vì Loan mà ở lại. Nó là một tảng đá đè rất nặng lên người Loan.</div>
+    <br>
+    <div class="line">Chỉ đến đoạn này Loan mới có thể khóc, bây giờ Loan đang không biết mình đang làm gì nữa, đang cảm nhận điều gì, đang ở đâu.</div>
+    <br>
+    <div class="line">Loan luôn lý tưởng hóa mọi thứ, phải, trong suốt những thời kỳ như thế, Loan vẫn luôn lý tưởng hóa mọi thứ, chính là luôn thấy cuộc sống của mình rất tốt đẹp, rất may mắn nhiều thứ. Luôn cảm thấy như mình là đứa con ngoan được ông trời thương yêu bảo bọc vậy. Mọi thứ đều là màu hồng. Để rồi đến khi trầm cảm, hay rơi vào khủng hoảng, Loan lại chỉ biết tự trách chính mình. Rõ ràng là mày có cuộc sống tốt như vậy, trầm cảm cái gì chứ. Rồi luôn không thể hiểu nổi bản thân mình, không thể hiểu từng hành vi, từng hành động của mình. Phải, việc lý tưởng hóa mọi thứ khiến Loan không cho phép bản thân trầm cảm. Thế nên, chỉ duy nhất một việc Loan làm tốt chính là luôn tự trách chính mình, mắng nhiết cái con người yếu đuối, vô dụng đó.</div>
+    <br>
+    <div class="line">Thật không biết sao, lần nào cũng vậy, phải tận đến khi mọi thứ sụp đổ, nhìn lại mọi thứ, Loan mới dám cho mình mình khoảng không để thở, mới dám chấp nhận một bản thân đang suy sụp.</div>
+    <br>
+    <div class="line">Loan biết bản thân mình không thích hợp với việc nhắn tin, cũng phải trải qua bao nhiêu lần tự trách chính mình, Loan mới chấp nhận điều đó. Từ lúc nhỏ, năm đó Loan lớp 6, em Gôn, cả Na nữa, lúc đó cũng đã lớn, ngày ngày nhắn tin cho Loan. Có điều có những hôm tâm trạng xấu, Loan lại lảng trạnh việc liên lạc. Bị dỗi rồi lại tự trách. Nhưng chuỗi ngày đó liên lục diễn ra. Loan ghost bao nhiêu là tin nhắn của em. Để sau này chỉ còn biết hối hận, hối hận tại sao khi đó không trò chuyện cùng em nhiều hơn. Sau đó Loan cố gắng thay đổi, để bản thân nhắn tin nhiều hơn, năm lớp 8 là Loan hăng hái nhắn tin nhất. Đến cả việc chào chấm dứt cuộc trò chuyện cũng không biết, thành ra cứ ôm điện thoại mãi h ăn, đến bị la luôn. Sau này cũng nhắn nhiều nhiều, liên hệ với bạn bè nhiều hơn. Nhưng cứ vậy, lúc vui vẻ thì không sao, những lúc thất thường tiêu cực Loan lại trốn đi. Rồi lại liên tục tự trách, mỗi khi quên nhắn tin sẽ bị dỗi. Loan cố thay đổi, nói với bạn bè mình sẽ thay đổi, như mấy năm trời đều vậy, không thay đổi. Loan từng rất hối hận, vô cùng hối hận vì không giữ liên lạc với em mình. Mấy năm trời luôn áy náy với mọi người, tự ghét chính mình. Sau này gặp crush của Loan, một người seen tin nhắn là một chuyện bình thường, Huy nói, seen vậy là trả lời rồi. Loan học theo, cũng thấy nhẹ nhõm hơn rất nhiều. Rồi cũng không biết như thế nào, ra sao, càng ngày càng lười nhắn tin. Nhắn tin với Quyên rất vui, không lười tí nào, chỉ là đến khi Quyên không chủ động, thì Loan lại rơi vào thự động, không biết cách mở đầu câu chuyện ra sao cả. Rồi lại cứ tự trách mình. Cũng tự trách bản thân liên tục thấy có lỗi nhưng lại không sửa đổi.</div>
+    <br>
+    <div class="line">Nói ra thì làm một Song Tử thật không dễ, Loan luôn phải đợi đối phương chủ động trước, mới chọn được cho mình nhân cách và thái độ đối xử với người đó. Cứ hễ lần nào Loan là người chủ động, thì đối phương luôn đáp lại, bảo sao Loan lạ thế. Bởi Loan không có nhiều không gian để mà nhớ lần cuối đối với mỗi người là nhân cách nào. Bây giờ thì Loan dễ dãi với bản thân hơn, đối phương thấy mình lạ thì có sao đâu chứ. Sao trước đây lại luốn cảm thấy nặng nề với những câu hỏi đó, như những lời phê phán vậy. Bởi vậy Loan luôn cảm thấy, khi làm chính mình thì cứ vô tình tổn thương người bên cạnh sao đó. Những xung đột này khiến Loan đau đáu rất nhiều lần. Có lúc thấy nó rất đơn giản, chẳng to tát gì, có lúc thấy nó là một cuộc đấu tranh dữ dội khó mà có ngày kết thúc. Nhưng mà vậy rất tốt, người ta có nói, còn đấu tranh là còn hạnh phúc.</div>
+    <br>
+    <div class="line">Nói nhiều như vậy, đối diện với nhiều thứ như vậy, vẫn là có những nơi không dám chạm đến. Biết bản thân nên đối diện, nhưng Loan không dám, né tránh đã thành quen, bây giờ đã cảm thấy nó là cơ chế bảo vệ mình, tháo nó ra, sẽ không còn an toàn nữa.</div>
+    <br>
+    <div class="line">Loan bây giờ luôn tự ti, luôn sợ mình kéo mọi người đi xuống. Chỉ khi mọi người ngày càng đi lên, Loan mới cảm thấy được nhẹ nhõm. Loan không muốn kéo Quyên xuống cùng Loan, những người khác cũng vậy. Cũng sợ mọi người thấy Loan đi xuống mà chê trách, lọc Loan ra khỏi cuộc đời. Loan thà là tự nguyện bước ra trước.</div>
+    <br>
+    <div class="line">Thật lòng mà nói, đối diện với Duy bây giờ. Loan rất tự ti.</div>
+    <br>
+    <div class="line">Loan là người thất bại nặng nề, rớt phỏng vấn Visa 2 lần. Bỏ học Đại học. Ôn thi lại thì cũng biết bao nhiêu chuyện, cuối cùng lại không làm đúng thủ tục giấy tờ mà bỏ thi. Bỏ dở liền hai năm không làm được điều gì. Lúc đó Loan luôn cảm thấy rất tủi thân. Vì khi xưa Loan luôn tạo vỏ bọc bên ngoài cho chính mình, nên mọi người càng không chạm tới, Loan càng cảm thấy an tâm. Nhưng những chuyện xảy ra trong thời gian đó, Loan chính là không còn giấu bản thân được nữa. Cũng không còn sức tỏ ra mạnh mẽ trước mọi người. Vậy nên vô cùng tủi thân khi không nhận lại sự quan tâm nào. Loan biết chỉ là mọi người không biết cách thôi. Giống Loan với Duy bây giờ vậy, Loan vốn cũng chẳng biết cách quan tâm Duy, dù biết Duy đang trải qua rất nhiều chuyện trong cuộc sống. Nên Loan áy náy lắm. Loan cũng chưa bao giờ làm người chủ động quan tâm ai cả, Loan rất sợ hãi khi không ở trong vùng an toàn của mình. Cái vùng an toàn mà cứ mỗi lần mở ra, nó lại hối hận rồi lại phải lui về, khóa thêm nhiều lớp hơn. Không phải Loan không mở lòng, mà mỗi lần mở lòng, Loan lại nhận về tổn thương nhiều hơn, Loan không muốn đối diện với nó. Loan thà cô độc một mình trải qua tất cả, cũng không muốn mở lòng cho bất cứ ai, để rồi tổn thương nhiều hơn. Bao nhiêu lần Loan luôn nhận được về sự không trải lòng, nó gây trở ngại cho bất kể mối quan hệ nào. Loan học cách, mở nó ra, rồi lại phải quyết đình khóa nó lại. Cuối cùng chấp nhận những trở ngại kia, thà rằng bản thân cô độc bước trên con đường.</div>
+    <br>
+    <div class="line">Có những ngày tháng sức cùng lực kiệt, Loan không giấu được mà khóc nức trong phòng, dù im lặng mà khóc, nhưng vẫn là để mọi người biết. Vẫn là làm lộ ra những vẻ bất cần, những bất ổn. Có khi Loan nghĩ, như vậy cũng tốt, bản thân hãy cho phép mình được mọi người quan tâm. Chỉ là với thay đổi nhỏ đó của Loan, không nói ra thì không ai biết. Mọi người vẫn luôn cho rằng tốt nhất không nên chạm vào. Vậy nên cuối cùng, Loan lại chỉ biết trách tất cả. Mỗi lúc không kìm được cảm xúc trước mọi người, Loan luôn bối rối, không biết cách đối diện. Cũng không biết sao trong lòng lại kỳ vọng và hy vọng sẽ được thấu hiểu. Nên mới để bản thân rơi vào thất vọng, tủi thân vô cùng. </div>
+    <br>
+    <div class="line">Thật ra Loan cũng vậy. Loan cũng là người mà để Quyên phải tủi thân rất nhiều. Có những giai đoạn Loan không thể làm gì, không thể chủ động quan tâm. Loan không biết cách. Môi trường mà Loan lớn lên trước giờ chưa từng dạy Loan cách tâm sự. Loan luôn là một người bạn tồi.</div>
+    <br>
+    <div class="line">Để rồi nhận ra, hóa ra mọi người cũng vậy. Thật ra, đâu có ai biết cách đâu chứ. Loan chỉ đỗ lỗi cho bản thân không biết cách mở lòng, không biết cách tìm kiếm sự quan tâm.</div>
+    <br>
+    <div class="line">Nhưng với những đánh đổi mà nó mang lại. Vẫn là lựa chọn cô độc thì hơn. Một mình rất tốt. Càng đưa ai vào gần, càng dễ để chính mình tổn thương. Thật kỳ lạ, thật mâu thuẫn.</div>
+    <br>
+    <div class="line">Nghĩ nghĩ thấy Loan thật mít ướt. Nhưng Loan lại chưa can đảm khóc trước mặt ai bao giờ. Nếu có rơi nước mắt trước ba mẹ thì đó là những giọt ấm ức và tức tối mà thôi. Ở trọ Loan luôn giấu dưới mền hay gối, Loan cũng không rõ có ai biết không nữa. Một lần lúc học phỏng vấn. Một lần lúc ra ngân hàng đăng ký sinh trắc, cũng không biết bản thân ấm ức cái gì, cứ nghẹn căng cả cuốn họng ra rồi rơi nước mắt. Ui không vậy là cũng nhiều nhiều. Lần gần đây, Loan một vì đi xe lại lại quá nhiều, đuối quá nên Loan ở lại Hưng Phú, cảm xúc lại thất thường, rồi không biết sao Loan lại vừa cười rồi khóc trước mặt mọi người. Đáng lẽ từ lúc nãy Loan nên đi về mới phải, những lúc nhưu này, đáng lẽ Loan phải né tránh mọi người chứ. Lúc đó, trong phút chốc, Loan thử để bản thân can đảm khóc trước mặt người khác xem sao, nên cũng không đi trốn nữa, cứ vậy vừa khóc vừa trò chuyện thôi. Cũng không biết làm sai chỗ nào nữa. Loan không được vỗ về. Thươngg thì lại cứ hỏi, Loan giận gì thương hả, rồi nói nhiều thứ mà Loan k nghe rõ nữa. Sau đó thì, Thươngg kể về những áp lực gần đây, về việc Thương mệt mỏi, Thương muốn đi caffee ... Rồi cũng không biết sao nữa, Loan k có động thái gì, vẫn cố như bình thường lắng nghe Thươngg. Đến tối mọi người đi ngủ, Loan lại không nhịn được mà ngồi khóc. Không biết sao Loan cảm thấy những gì diễn ra hôm nay khiến Loan rất tổn thương. Thật ra là do Thươngg xui xẻo chọt chúng Loan vào lúc không ổn định. Là quá nhiều lý do, là Loan vô tình đặt hy vọng rồi thất vọng. Loan không biết nữa, Loan chỉ biets trong lòng mình rất đau, Loan không biết bao lâu thì lành. Cứ vậy, khi về, Loan soạn một tin nhắn dài, quẳng vào ChatGPT, quẳng vô hai dấu ngoặc kép, rồi gửi Thươngg. Loan k biết nữa, Loan chỉ nghĩ đến lời trước đây Quyên nói, là có gì phải nói ra, nên Loan nói. Rồi mọi chuyện sau đó rối tung lên, Thươngg over hơn mức những gì Loan bày tỏ. Loan k biết nữa, tới đoạn đó Loan lại không biết cách đối diện, Loan block Thươngg. Qua mấy tuần thì tụi Loan nhắn tin làm hòa rồi. Loan cũng k biết cái j đang diễn ra nữa. Cuối cùng k biết đâu mới là điều tốt nhất. Là giữ im lặng, hay là nói ra.</div>
+    <br>
+    <div class="line">Bây giờ Loan ước mọi người đều lơ Loan đi, mọi người đều không quan tâm Loan nữa. Thật tệ là trong khi Loan cố dành ra những ngày tâm trạng tốt nhất để liên lạc với ai, thì những người bạn đó lại cố khêu lại nỗi buồn trong Loan. Họ bắt Loan phải gọi tên nỗi buồn của mình. Thất tình hả, bệnh tật hả, họ luôn tra hỏi xem Loan đã trải qua gì. Loan luôn cảm động trước những quan tâm đó. Nhưng Loan không làm được, rõ ràng Loan đã đợi đến lúc bản thân đã vượt qua được, mới mở cửa tìm đến mọi người, kết nối lại. Nhưng họ lại khiến Loan phải trả lời cho câu hỏi đó, họ phải biết Loan đang là ai Loan đã trải qua gì. Loan căm ghét, làm ơn đừng cố tỏ ra ân cần. Tại sao nhất định phải có biến cố gì con người mới được phép buồn chứ. Loan không có chuyện gì cả Loan chỉ là sống cuộc đời của mình, Loan chỉ là không muốn sống giả dối với bản thân, Loan không muốn gượng cười khi lòng không vui nữa. Cuộc đời này thiếu chuyện buồn lắm sao, họ bắt Loan kể ra câu chuyện của mình. Loan lại càng thấy thật nặng nề, rõ là cuộc sống mình rất tốt đẹp, mình không có cái tên nào đặt cho cảm xúc này cả, chả phải thất tình, chả phải bất kỳ nhãn tên nào. Chỉ là buồn thôi.</div>
+    <br>
+    <div class="line">Tại sao mọi người chỉ đợi đến khi Loan thay đổi thứ gì đó, mới quan tâm hỏi han. Phải họ lo lắng cho Loan. Nhưng đối với Loan mà nói, mọi sự quan tâm đó đều biến thành lời chất vấn. Họ nói Loan thay đổi quá nhiều, nhưng Loan từ trước giờ vẫn chưa từng thay đổi, theo một góc độ nào mà nói, Loan vẫn là chính Loan.</div>
+    <br>
+    <div class="line">Loan không để bản thân gượng ép giữ lại những mối quan hệ nữa.</div>
+    <br>
+    <div class="line">Mỗi khi Loan xem ai đó là bạn, Loan đều tự mình gánh những trách nhiệm vô hình. Loan sợ bản thân không là một người bạn tốt. Sau này Loan nhận ra, có vẻ vấn đề rằng là từ đầu hai người đã không là bạn của nhau. Đúng vậy, tại sao phải cố níu giữ những ràng buộc trong quá khứ chứ, tại sao nhất định phải giữ liên hệ với những người cùng từng chung một liên kết. Rõ ràng khi gặp một người bạn thật sự, Loan sẽ chẳng để những thứ đó bận tâm.</div>
+    <br>
+    <div class="line">Những người bạn năm Nhất của Loan rất tốt, bây giờ Loan rất nhớ họ. Mọi người đến với nhau một cách tự nhiên. Chỉ là, gặp họ khiến Loan đối diện với những mảng đen của năm nhất, gặp họ khiến Loan áp lực về 2 năm phí phạm của mình. Thật sự với Loan mà nói chả phí phạm bao nhiêu cả, Loan được trải nghiệm rất nhiều thứ, được gặp Duy, gặp mọi người, có những bài học của riêng mình. Nhưng thứ Loan sợ lại là sợ bị phê phán, sợ bản thân sẽ tự ti.</div>
+    <br>
+    <div class="line">Hiện tại trong đầu Loan, trong tim, trong lòng. Cảm giác cứ như một bãi phế thải rác thủy tinh. Mọi thứ xào xạt trong tâm trí Loan, xé vụn từng thứ một. Bây giờ quay trở lại trường học, lớp cửa kia của Loan lại khóa thêm một lớp, Loan chẳng để ai đó dễ dàng bước qua lớp cửa đó nữa cả.</div>
+    <br>
+    <div class="line">Quả thật mà nói, giữ lại trong lớp cửa trong cùng, lại chính là Duy.</div>
+    <br>
+    <div class="line">Đối với mọi mối quan hệ, Loan luôn áy náy về sự khó mở lòng của chính mình. Nhưng lại chưa từng chủ động mở nó ra được</div>
+    <br>
+    <div class="line">Cũng không biết sao giờ đây lại thấy an toàn mà chia sẻ tất thảy cho Duy</div>
+    <br>
+    <div class="line">Cũng một phần muốn kéo lại khoảng cách của hai đứa mình</div>
+    <br>
+    <div class="line">Một phần muốn nói với Duy, là</div>
+    <br>
+    <div class="line">Là gì nhỉ?</div>
+    <br>
+    <div class="line">Là sự đồng cảm chăng</div>
+    <br>
+    <div class="line">Duy đọc đến đây thì cũng coi như đọc được hơn nữa cuốn sách 100 trang rồi</div>
+    <br>
+    <div class="line">Đây xem như là bức thư đầu tiên Loan viết cho một người bạn</div>
+    <br>
+    <div class="line">Cảm ơn Duy đã hiện diện, cảm ơn vì sự an toàn mà Duy mang lại</div>
+    <br>
+    <div class="line">Để Loan trút được hết những tâm sự này</div>
+    <br>
+    <div class="line">Chỉ có điều, viết là thư này là vì muốn kéo gần hai đứa mình lại. Nhưng bây giờ Loan lại không dám gửi.</div>
+    <br>
+    <div class="line">Thế giới này thật là khó sống.</div>
+    <br>
+    <div class="line">Bây giờ Loan có nên gửi nó cho Duy không? Gửi bằng cách nào đây?</div>
+    <br>
+    <div class="line">Loan vốn đánh ra cứ đánh như vậy</div>
+    <br>
+    <div class="line">Cũng chẳng giống một bức thư</div>
+    <br>
+    <div class="line">Có nên đề dòng Liebe Duy rồi kết thúc bằng Dein j j đó không</div>
+    <br>
+    <div class="line">Hổng biết nữa</div>
+    <br>
+    <div class="line">Không biết không biết không biết</div>
+    <br>
+    <div class="line">Thôi kệ vậy</div>
+    <br>
+    <div class="line">Duy Duy</div>
+    <br>
+    <div class="line">Dạo này Duy Duy có nhắc rất nhiều đến cái chết. Cũng không phải dạo này, mà là từ trước đây rồi</div>
+    <br>
+    <div class="line">Loan biết Duy rất dũng cảm, Duy từng nói, mỗi khi nghĩ đến nó, Duy sẽ đặt mình vào tương lai, và tưởng tượng mọi thứ đã trôi qua hết và chẳng có gì cả, rồi cũng vượt qua. Duy nói là cuộc đời này như một cuộc game vậy, người nào sống trâu sẽ chiến thắng, một con game sinh tồn mà mỗi lần trào đời là một trận game. Vì nhờ vào nó mà vượt qua được những giai đoạn đen tối trong cuộc đời. Cũng là câu nói đó của Duy mà Loan luôn tự nhủ, khi ở tương lai, mình sẽ thấy nó chẳng là gì cả, quả thật là như vậy, càng vượt qua nhiều ải của cuộc đời, mình càng tích cho mình những chiếc cúp để đời. Để rồi mai mốt đăng xuất, mình sẽ là người chơi ưu tú.</div>
+    <br>
+    <div class="line">Có những tổn thương trong quá khứ, trong tuổi thơ. Mình nhìn lại nó, không còn trách nó nữa, mà nhìn lại để chấp nhận một bản thân không hoàn hảo. Nhìn lại những tổn thương mình trải qua, Loan mới cho phép bản thân gục ngã, để rồi từ từ đứng lên.</div>
+    <br>
+    <div class="line">Duy Duy, trước đây Loan vẽ một 2 bức tranh. Một là Loan đang chới với, bị đùn xuống đáy biển. Một là Duy cô đơn thu mình trong một chiếc lọ.</div>
+    <br>
+    <div class="line">Nếu vẽ lại, Loan sẽ vẽ Loan là người đang lặn xuống đáy biển. Trải qua khủng hoảng và trầm cảm thật khó khăn, nhất là khi mình không thể chấp nhận nó. Nhưng khi chấp nhận rồi, chính mình sẽ không là một người bị chìm xuống đáy biển nữa, mà là một thợ lặn, cho phép bản thân mò xuống sâu nhất dưới đáy biển, để khám phá mọi thứ và học những bài học. Không mò xuống đây thì làm sao tìm được ngọc chứ. Loan bây giờ vẫn còn ngụp lặn dưới nó, nhưng mà là tự nguyện, giống như khi khám phá Thế giới này, muốn trèo đến một ngọn núi khác thì cũng có lúc phải đi đến những thung lũng mới qua tiếp được ngọn núi tiếp theo, đỉnh núi là đích đến, nhưng hành trình và những  trải nghiệm trên con đường mình đi mới là kho báu.</div>
+    <br>
+    <div class="line">Và Loan vẫn sẽ vẽ Duy cô đơn trong chiếc lọ, vì Duy khiến Loan cảm thấy người bạn này là người rất tự thu mình lại, tạo ra vỏ bọc bên ngoài. Nếu là Duy Duy muốn Loan vẽ lại Duy ở trong trạng thái nào đây?</div>
+    <br>
+    <div class="line">Đôi khi cuộc đời có những chiếc phao, đôi khi có người lại không túm được chiếc phao nào. Dù là trường hợp nào, cũng là tự chính mình phải bám vào nó, phải tự tìm cái phao gần nhất mà neo vào. Duy là cái phao đó của Loan. Là nơi Loan neo vào để ngoi lên mặt nước. Duy luôn xuất hiện khi Loan cần, mà không chút đắn đo nào. Năm nhất của tụi mình tuyệt vời ghê.</div>
+    <br>
+    <div class="line">Viết thư thiệt là tốt, Loan ước con người sống như ngày xưa, không phải những dòng tin nhắn. Mà là những bức thư. Chỉ là, thời này mà viếc thư cho ai, chắc là sến chết, Loan chỉ sợ bị chê sến thôi. Mà Loan thì sến thiệt, Loan sợ sến, nhưng lại là một người sến. Chắc là ảnh hướng của cung Đất, Loan quả thật là một người rất bảo thủ. Loan không thích tóc mình phải đụng vào hóa chất hay nhiệt độ. Loan nhận ra khi lần đầu đi dũi tóc Loan đã khóc mà không biết lý do, tự nhiên thấy tóc mình bị ép đến bốc khói như thế, cứ không tự chủ được mà khóc. Nhờ vậy Loan mới biết, Loan đây không thích tổn thương tóc của mình. Loan cũng không thích những xu hướng, không thích những thứ gì sẽ mất đi quá nhanh, nếu không gặp Quyên, chắc Loan đã còn cổ hũ hơn bây giờ rất nhiều. Loan cũng không thích thuốc tây, là một người từng một mực đi theo nghề Y, từ nhỏ Loan đã có lòng thù với thuốc tây, chỉ là không thích thôi. Loan cảm thấy cơ thể mình là một cỗ máy rất tuyệt vời, uống thuốc vào, không khác gì mình đang thay thế từng bộ phận của mình bằng vật liệu bên ngoài vậy. Từ nhỏ đến lớn, chỉ trừ mấy đợt bị viêm tai giữa nặng, Loan luôn hạn chế uống thuốc nhiều nhất có thể. Loan từ bé luôn thích ăn nhiều trái cây, sau này thì năng ăn hành ăn tỏi. Loan trang bị cho lực lượng vũ trang của mình rất kỹ càng. Không chỉ mấy đồ vật xung quanh, Loan luôn tin rằng từng bộ phận trong mình đều có tiếng nói của nó. Giống như con người và Trái Đất này vậy, có khi cũng là một bộ phận của ai đó sao. Có khi Trái Đất là một tế bào đột biến. Ung thư cũng vậy, nó là một hình thức bãi công quy mô lớn. Mỗi tế bào trong người mình luôn tự hy sinh để tái tạo lại những thứ mới. Nhưng khi một vùng nào đó liên tục bị tổn thương, liên tục bị các chất tổn hại, nó cứ buộc mình từ bỏ chính mình, liên tục bao nhiêu tế bào bị tổn thương phải hy sinh, cuối cùng nó biểu tình và không hy sinh ngu xuẩn nữa, nó sống cho chính nó và sinh sôi nhiều hơn, trở thành những tế bào ung thư.</div>
+    <br>
+    <div class="line">Mọi người nói rất đúng, cũng không biết sao Loan rất kỳ thị những thứ sến súa, những thứ cũ như kiểu mấy hình in thời 8x, ren ren hoa văn các kiểu. Nhưng Loan lại là một con người rất cũ kỹ. Đến ông ngoại còn chê Loan cũ. Nhưng Loan là vậy, thứ gì đồng hành cùng Loan Loan đều không nỡ bỏ rơi nó, từng chiếc áo chiếc quần. Nhưng mng chê cũng không sao, Loan không muốn thay đổi nết đó. Ít ra Loan của sau này nhất định sẽ chỉ đầu tư vào nhưng thứ lâu cũ, có thể đồng hành đi cùng mình thật lâu dàim mà k cũ đi.</div>
+    <br>
+    <div class="line">Chỉ là mọi thứ đều có duyên số. Duyên đến duyên lại đi. Níu kéo sẽ làm mọi thứ trở nên đau khổ. Chỉ là đau khổ thì không nhất định là xấu. Không đau khổ cũng vậy. Bất cứ là gì, mình đều là người lựa chọn.</div>
+    <br>
+    <div class="line">Nhưng nó cũng mâu thuẫn rất nhiều thứ. Loan thấy rất ủng hộ với lối sống Minima j đó, lối sống tối giản của người Nhật. Muốn tối giản thì phải vứt bỏ đi vài thứ. Có những lúc Loan soạn những bộ đồ cũ và định mang đi, thì luôn có việc gì đó khiến Loan giữ lại. Rất nhiều trường hợp như thế. Xe máy cũng vậy, cứ như nó biết Loan sắp bỏ nó đi mà níu giữ lại vậy. Nên thôi kệ, thuận theo duyên số, Loan vẫn là không nỡ vứt đi. Loan gom nó hết lại một chỗ, để thật gọn gàng là được. Quan trọng là sau này không mua sắm bừa bãi nữa. Nếu không gian nhiều thứ quá, tâm trí cũng sẽ tương tự, nó sẽ chiếm rất nhiều khoảng trống. Mà những khoảng trống đó, là những thứ có ý nghĩ rất nhiều so với bề ngoài vô hình của nó.</div>
+    <br>
+    <div class="line">Viết dài nữa chắc Duy không đọc hết quá</div>
+    <br>
+    <div class="line">Nhưng giờ Loan vẫn chưa dám gửi, cứ không không gửi hả ta</div>
+    <br>
+    <div class="line">Có mail của Duy thì tốt, âm âm thầm thầm mà gửi, đến lúc Duy phát hiện ra thì cũng sẽ âm âm thầm thầm đọc đọc, một lá thư bất ngờ. Còn giờ mà gửi qua tin nhắn, Duy sẽ hỏi, cái gì đây, rất là gượng gạo a. Haha, Loan viết nhiều thư, viết cho Duy, viết cho crush, vẫn là chưa gửi đi bức nào. Cũng không biết số phận của bức này ra sao, mới nãy đầu óc Loan trống rỗng cứ viết viết rồi gửi đại đại thôi. Nhưng nhờ nó bắt đầu trở về bla bla bla rồi.</div>
+    <br>
+    <div class="line">Có lắm lúc, khi Loan liên lạc lại với ai đó. Thì một là Loan đã tốt lên, nhưng còn trường hợp khác là khi đó Loan bốc đồng tưng tưng tửng tửng mà tìm người trò chuyện. Mấy lúc đó bao giờ nhìn lại Loan cũng hối hận.</div>
+    <br>
+    <div class="line">Có những thứ Loan chia sẻ ra, đồng nghĩa với bao nhiêu lớp của được mở ra. Cũng là những chuyện Loan đã vượt qua phần nào mới dám đối diện với nó. Trước đây Loan không bao giờ dám nhắc đến em trai. Cùng đã từng không dám chấp nhận nó. Ngày Loan xuống tới nơi, khi chỉ còn lại một bàn thờ lạnh lẽo và bức hình, không được gặp lần cuối, không được tham dự đám. Loan khù khờ, đi tìm khắp nơi, cả dưới bàn thờ. Ước chi phép màu xuất hiện, ước chi chỉ là một cuộc trốn tìm. Chỉ đến sau này, khi đối diện với lần thập nhất sinh tử của ba. Loan mới buông lỏng ra, chấp nhận những sự rời đi trên Thế giới này. Lúc đó Loan mới bắt đầu, kể về người em tuyệt vời của Loan. Mỗi ngày lớn lên, từng người từng người rời đi. Đều là những chuyện Loan chưa từng nói ra.</div>
+    <br>
+    <div class="line">Loan từng hối thúc bản thân phải cùng những người trong hiện tại sống thực tốt. Có đôi khi, Loan luôn tìm cách kết nối lại những mối quan hệ cũ, mãi đến khi kiệt sức mới nhận ra. Thật ra bản thân không cần hối hận. Vì có thật tình mà nói, không có những kết nối cùng nhau cố gắng kết nối sẽ mất rất nhiều năng lượng. Thả lỏng một chút, Loan không cần gánh những trách nhiệm tự mình đặt ra đó. Cứ qua mỗi lần rớt đến bờ vực, Loan lại buông bỏ thêm được một thứ. Rồi cảm thấy nhẹ nhỏm hơn. Có điều, đôi lúc có những ranh giới rất mong manh. Mọi người chúng ta đều không phân biệt được đâu là đúng sai. Có nhiều lúc cũng thật nực cười, rõ ràng việc phân biệt đúng sai đã không dễ, nhưng đôi khi vẫn chọn làm điều sai. Mà ai là người qui định đúng với chả sai nhỉ. Thế giới này không tồn tại đúng sai, chỉ tồn tại phù hợp hay không thôi. Là đúng sai với sự phù hợp này, càng phù hợp sẽ càng đúng, càng không phù hợp thì là sai. Nhưng phải chăng chỉ là phù hợp hay không, có những người, sinh ra đã mang sứ mệnh làm những điều sai, có khi chính họ cũng không muốn, nếu vậy thì nó có phù hợp không. Nhưng cứ như sự sắp đặt, rồi họ vẫn cứ làm theo một sứ mệnh vô hình. Không biết nữa.</div>
+    <br>
+    <div class="line">Mấy nay Loan đang được sắp đặt một cuộc đời, nhẹ nhỏm. Từ lâu Loan đã xóa Tik Tok rồi. Nhưng mà vẫn lướt Facebook với Youtube rồi cả Instagram. Trong những ngày Loan đang cai nó dần. Thì chị chủ nhà thông báo cắt wifi. Mới đầu Loan thấy thật tuyệt, vậy là mình được như ý rồi, k có wifi sẽ bớt đi xem mấy cái video. Hôm nay là ngày thứ 3 rồi. Cũng thật tốt mà cũng thật không tốt, có quá nhiều bất tiện. Nhưng Loan cứ thử thích nghi với nó xem sao. Loan vừa phát hiện ra Facebook của mình bị hack 4 ngày trước, ayza, trộm vía nó vẫn chưa bay màu.</div>
+    <br>
+    <div class="line">Loan thấy hiện tại rất tuyệt vời cứ sau mỗi lần buông dần buông dần. H điện thoại Loan chẳng còn tin nhắn nào nữa. Loan thích như ngày trước, có việc mới nhắn, chứ không tám gẫu đâu, tốn nhiều năng lượng lắm. Nói thật lúc nhắn với ai Loan bị overthinking rất nhiều, cố ngăn bị lại nhưng vẫn không ngăn được, nên cứ nhắn thì sẽ khiến bản thân tụt mood</div>
+    <br>
+    <div class="line">Loan đã gạt bớt đi rất nhiều những lo toan, Nhưng thật sự bây giờ khó sống lắm. Loan sợ hãi đến trường vì lỡ gặp lại những người mà Loan đã ghost, Loan ghost rồi biến mất nhiều như vậy, bây giờ vốn rất hổ thẹn. Vốn rất khó để thoát ra khỏi những thứ Loan gây ra. Ngày trước Loan chọn trốn tránh. Vậy nên bây giờ cữ mãi sống trong sự trốn tránh của mình. Loan không biết trốn tránh hay đối diện sẽ tốt hơn cho mình nữa. Nhưng trong vùng trốn tránh này, mọi thứ tốt hơn, nhưng lại rất ngột ngạt.</div>
+    <br>
+    <div class="line">Loan không biết cuộc đời sẽ đi đâu về đâu nữa. Loan chỉ biết bây giờ phải dùng thật nhiều cái hít thở sau khi cảm xúc nó ập tới, mọi sự nhạy cảm tiêu cực. Loan chỉ biết hít thở thật sâu, có khi nó là một sự ảnh hưởng năng lượng nào đó, có khi nó là những thay đổi của nội tiết, có khi là do hoomon. Có khi hạ đường huyết cũng gây ra những bất an đó. Loan phải thật tỉnh táo tỉnh táo mà xử lí nó. Chỉ cần để nó ảnh hưởng tới cuộc sống, ví dụ như cúp học, hay là bốc đồng, thì nó sẽ lại sụp đỗ. Hít thật sâu và lãnh cảm với mọi thứ, mọi sự tiêu cực chỉ là tự bản thân tự tưởng tượng ra. Cùng lắm giữ bên mình thuốc giảm lo âu. Có vẻ Loan là một người rất chiều chuộng bản thân, thật ra Loan chưa bao giờ stress đến độ đau dạ dày. Nó chỉ cần hơi tăng axit, hơi nóng ran ran, Loan đã lập tức trốn tránh mọi áp lực. Chỉ cần não thấy nặng nề Loan cũng sẽ trốn. Vậy nên liên tục cúp học chăng. Không không không, bây giờ Loan đã biết nó là gì, trước đây là vô thức mà ứng biến với nó, giờ phải tỉnh thức ứng biến, để bản thân không rơi vào tình trạng cúp học không rõ lý do.</div>
+    <br>
+    <div class="line">Loan không nhịn được mà ăn cay, chất cay giúp kích thích dây thần kinh. Giúp Loan thấy đỡ hơn, xáo tan được cảm giác trống trải. Nhưng để ý mới thấy, mấy lần lo âu như vậy đều do nó. Kiêng ớt thôi, kiêng cả cà phê.</div>
+    <br>
+    <div class="line">Bỏ đi, những lần vực dậy trước đây, đều là khí thế hừng hực, rồi lại tự phủ vô mặt chính mình.</div>
+    <br>
+    <div class="line">Không vậy nữa</div>
+    <br>
+    <div class="line">Cứ đại đại đi, ừ dẹp ớt</div>
+    <br>
+    <div class="line">Loan chỉ mới đi học lại gần đây thôii</div>
+    <br>
+    <div class="line">Từ năm ngoái, Loan luôn k kiềm được mà ăn đêm, đến tận hiện tại, bên cạnh Loan vẫn là một ly trà sữa và đồ ăn vặt, Loan cần nước đã, Loan cần đồ ăn mặn. Gì cũng được, chỉ là k cưỡng lại được, luôn đặt đồ ăn đêm. Có áy náy thế nào thì cũng không cưỡng lại mà đặt. Một phần có phải vì đã thành thói quen.</div>
+    <br>
+    <div class="line">Loan nực cười bản thân lúc nào bên ngoài cũng lo lắng, nhắc nhở người khác ăn đúng bữa, ngủ đúng giờ. Để rồi bất lực nhìn bản thân chẳng bao giờ thực hiện được. Nhưng mà ai qui định vậy. Nếu bất lực đến vậy, thôi thì trôi theo nó. Không biết nữa, lâu lắm rồi bao giờ đi ngủ cũng mở thứ gì đó luyên thuyên để ngủ. Nhưng để chi chứ, nếu đầu óc mình đã thích suy ngẫm thì cứ suy ngẫm, chỉ vì guồng sống của xã hội mà phải ép mình, thật không đáng. Trời, tư tưởng này không biết sẽ kéo dài trong bao lâu, nhưng nó khiến Loan dạo này nhẹ nhỏm đi hẳn. Ngủ từ 5h sáng đến 10h sáng, 12h đi học, về đến nhà buồn ngủ nhất định sẽ ngủ, 1h sáng dậy, lại làm bài học bài, làm xong thì nằm, cơ thể muốn ngủ thì ngủ, muốn duy tư thì suy tư. Nhà trường xếp lịch cũng thật hợp lý, có một tuần học 4 ngày, những ngày còn lại trống. Lúc đó sẽ lại ngủ bù. Không phải Loan muốn sống unhealthy, mà trước mắt, không k muốn đặt nặng những tiêu chuẩn, những guồng sinh hoạt của xã hội. Chỉ cần đi học đúng giờ. Giảm mọi tiêu chuẩn và kỳ vọng của bản thân đến mức thấp nhất. Vậy đi, Loan muốn lắng nghe mọi nhu cầu của cơ thế, có ngủ hơn 10 tiếng cũng không sao, có thức cả đêm suy nghĩ cũng không sao. Có học tập không tốt cũng không sao. Bản thân cũng là người rơi xuống đáy rồi, bước đi nhanh vội làm gì chứ. Chạy đua với xã hội này làm gì chứ, có lúc Loan nghĩ, nếu ba mẹ vẫn đặt kỳ vọng cao, Loan từ bỏ. Loan chẳng còn đặt kỳ vọng nào xa vời nữa. Làm những nhiều bản thân thích là được rồi.</div>
+    <br>
+    <div class="line">Loan may mắn, vào năm ngoái khi mọi sự tệ đi. Khi những ngày vì không muốn ở nơi xứ người lạnh lẽo, Loan nhịn thêm mấy ngày để được về quê, Loan sẽ tạm biệt mọi thứ trong ngôi nhà của mình, không ảnh hưởng đến ai. Là ba mẹ thì cũng được rồi, Loan sống cũng làm họ đau lòng, chết cũng vậy, nên thà rằng là chết đi, bản thân được giải thoát. Cũng không biết từ khi nào họ lại nhận ra những bất ổn của Loan. Họ nhường nhịn Loan, dịu dàng hơn với Loan rất nhiều. Rồi cũng những ngày đó, mẹ Loan cũng bộc lộ những sự yếu đuối của mình. Mẹ Loan bộc bạch những lời cứ như có sự dây kết nối khiến bản năng của một người mẹ nhận ra, Loan cũng không biết được kỳ tích đã đến từ lúc nào nữa, sao họ lại thay đổi nhiều đến thế chứ. Nghĩ thiệt nhiều thiệt nhiều, sợ hãi rất nhiều thứ. Nhưng cũng cảm nhận rõ, nếu mình nghĩ quẩn thì, thì sẽ nợ những người ở lại rất nhiều thứ, lỡ đâu phá hỏng cuộc đời của những người thân. Loan từ bỏ.</div>
+    <br>
+    <div class="line">Một lần khác về quê. Dường như mọi sự nhẫn nhịn trong họ bị dồn nén quá lâu, bây giờ lại bộc bạch tất thảy, không phải trước mặt Loan. Nhưng đều bị Loan nghe tất thảy. Loan không cần, không cần lo từng tí một cho cuộc sống của Loan, Loan cần họ sống cho cuộc sống của họ, Loan không cần họ nhẫn nhịn, để rồi bây giờ thốt ra.</div>
+    <br>
+    <div class="line">Tất cả đoạn ký ức đó, đều vỡ thành từng mảnh, Loan đều không muốn nhớ tới nó nữa</div>
+    <br>
+    <div class="line">Thật đáng ghét, Duy lại cứ vậy mà rơi vào nó</div>
+    <br>
+    <div class="line">Nhưng Loan chẳng làm sao biết được liệu Duy có thật sự giống Loan, hay chỉ là Loan tưởng tượng. Nhưng dù có tưởng tượng thì sao chứ. Rút cuộc Loan cũng không biết được suy nghĩ của Duy, không biết được những gì Duy thật sự cảm thấy. Những điều đó, nó bắt Loan phải khơi gợi lại mọi thứ</div>
+    <br>
+    <div class="line">Không nhắc tới nữa</div>
+    <br>
+    <div class="line">Mọi thứ qua rồi</div>
+    <br>
+    <div class="line">Vốn nó chưa từng được giải quyết, nhưng cứ như vậy mà trôi qua</div>
+    <br>
+    <div class="line">Mọi thứ lại tốt đẹp trở lại</div>
+    <br>
+    <div class="line">Có thật non nớt khi nói ra không ai hiểu mình</div>
+    <br>
+    <div class="line">Chính Loan cũng không hiểu mình, rồi lại càng trách sao không có ai đó, hiểu Loan để rồi giải thích cho Loan Loan đang bị gì chứ</div>
+    <br>
+    <div class="line">Loan khóa Facebook, lảng tránh mọi người. Chỉ là muốn trốn tránh. Trốn đã rồi, ngoi lại. Họ lại hỏi Loan, Sài Gòn đã làm gì Loan, tra nam nào đã làm gì Loan. Những câu hỏi đó đi vào trí óc Loan rồi lại thành lời chất vấn, khiến Loan cảm thấy bản thân rất kém cỏi. Phải có tác động gì đó mới được gục ngã sao. Thật tồi là chưa kịp thứ gì xảy ra cả, chỉ toàn là tự Loan hạ gục mình. Loan ghét khi người khác bắt Loan phải tìm cho mình một kẻ thù, phải tìm ra một câu chuyện mà kể cho họ từng vết thương của mình. Trước đây Loan không biết, tại sao Loan cứ ẩn, ngoi lên, rồi lại ẩn. Đến giờ mới nhận ra, là vì trốn tránh tất thảy mọi thứ đó. Có phải như vậy, mà con người mới tìm đến tự tử, dùng cách thức dễ dàng nhất để bày tỏ cho Thế giới biết mình đã rất tổn thương. Có phải như vậy mà người ta lao vào redflag, để được đau khổ, để được gọi tên vết thương của mình.</div>
+    <br>
+    <div class="line">Những ngày cúp học cũng chính là vì bản thân cứ rơi vào những tình huống đó. Bảo sao con người luôn phải tỏ ra vui vẻ. Chỉ cần một ngày tụt mood, không còn giữ được trạng thái đó nữa, liền đối diện với những câu hỏi như vậy. Rồi tự nhiên Loan nhận ra, chỉ cần ban đầu mình là người lãnh cảm, không phải người vui vẻ mạnh mẽ nữa, sẽ không cần như ngày sau này, sẽ không phải đối diện. Chết tiệt, Song Tử như Loan tâm trạng thay đổi thất thường, nhân cách cũng không bao giờ là một đứa. Trước đây cứ phải luôn tìm đúng hình tượng của mình mà đối xử với từng người, chỉ để né tránh những câu hỏi như bắt bẻ sao Loan lạ thế. Dù biết đó không phải bắt bẻ, chắc thế, nhưng góc nào đó trong Loan cứ không hài lòng về bản thân. Luôn muốn mình là một người nhất quán, Loan cũng là người rất ghét những sự không nhất quán của ba mẹ mình, lúc này lúc kia. Có phải vậy mà Loan luôn ghét sự không nhất quan của chính mình.</div>
+    <br>
+    <div class="line">Ôi là cái sự giằng xé này, không biết có điểm kết thúc không. Một là học cách làm người nhất quán, hai là làm chính mình và học cách bỏ ngoài tai những lời nhận xét. Hồi trước là chọn một, nhưng hi sinh bao nhiêu vẫn cứ là không đâu ra đâu. Giờ chọn hai, chọn hai, chọn hai.</div>
+    <br>
+    <div class="line">Ôi cái sự nói nhiều và chuyên gia lạc đề của Loan, mà vốn cũng đâu có đề đâu ha</div>
+    <br>
+    <div class="line">Loan cũng đâu phải là người khác người gì đâu ha, nhưng mà lại luôn phải cố gắng để mình giống mọi người. Cố đến thế nào vẫn là không hòa nhập được. Thôi say bye vậy.</div>
+    <br>
+    <div class="line">Cứ tưởng Loan đã buông bỏ được rất nhiều thứ. Nhưng hóa ra khi nhắc lại trong lòng vẫn mang nhiều phẫn nộ và cảm xúc như vậy</div>
+    <br>
+    <div class="line">Liệu nó có đi cùng Loan suốt không, vậy là phải đến thêm một giai đoạn nào đó, đối mặt với thứ gì đó, Loan mới buông thả được nó sao.</div>
+    <br>
+    <div class="line">Hay khi ghi ra hết rồi, Loan sẽ giũ được nó ra</div>
+    <br>
+    <div class="line">Phải, chỉ cần là Loan nhận diện được nó là gì, rồi cũng sẽ có cách giũ nó ra từng chút một</div>
+    <br>
+    <div class="line">Tự nhiên cảm thấy, đây lại là một bức thư rớt vào thùng thư nhật ký rồi</div>
+    <br>
+    <div class="line">Chắc là vẫn không dám gửi đâu</div>
+    <br>
+    <div class="line">Nhưng còn khoảng cách của tụi mình thì sao</div>
+    <br>
+    <div class="line">Thiệt ra mối quan hệ của tụi mình vẫn đang rất tốt mà ha</div>
+    <br>
+    <div class="line">Cũng không biết nữa, nhưng quả thật có nhiều sự xa cách quá</div>
+    <br>
+    <div class="line">Duy cũng cho Loan rất nhiều những gợi ý.</div>
+    <br>
+    <div class="line">Duy cũng là đang mang rất nhiều tổn thương</div>
+    <br>
+    <div class="line">Những nùi ở trên cũng không chữa lành gì cả, có khi còn xé rách thêm ha. Chỉ là sẽ kéo gần khoảng cách của tụi mình lại gần hơn, lại rất gần.</div>
+    <br>
+    <div class="line">Nếu gửi thì có rơi ra ngoài vùng an toàn không</div>
+    <br>
+    <div class="line">Loan không phải là người biết cách diễn đạt. Những lời nói ra mồm rồi, luôn bị người khác hiểu lầm. Bởi Loan rất sợ, nếu không khéo léo thì sẽ đem lại hiểu lầm, rồi làm tổn thương ai đó. Loan thấy ngôn ngữ rất nhiều hạn chế. Thế giới này như không ai hiểu được Loan vậy, lời Loan nói ra bao giờ cũng biến thành một ý nghĩa khác.</div>
+    <br>
+    <div class="line">Cũng không biết sao, Loan phản ứng mạnh mẽ với những quy tắc. Những ngày học Tiếng Anh ở trường, mỗi khi phải vào guồng sử dụng ngôn từ theo văn mẫu, người Loan lại khó chịu và buồn nôn. Khi nghe những MC nào, hay những chương trình nào lời nói rơi vào những khuôn khổ, cảm giác đó cũng lại dấy lên.</div>
+    <br>
+    <div class="line">Loan là người yêu những quy tắc ngầm, Loan thích mỗi tuần tự khi bản thân bên ngoài về nhà, sẽ làm theo tuần tự treo nón, treo áo khoác lên móc treo lên, để giày vào đúng chỗ của nó, dắt xe lên nhà rồi rung chuông. Loan thích bản thân khi rửa chén sẽ rửa theo tuần tự một từ to đến nhỏ, đặt nó lên bếp, rồi đến bồn, Loan thích rửa mấy bồn lâu ngày, vì có mấy mảng đen đen bám ở nó khi chà ra rồi cảm giác rất sảng khoái, bồn của riêng Loan luôn được giữ gìn sạch sẽ, tiếp tục tráng từ nhỏ đến to, úp lên và lâu thật khô bồn. Loan thích những thói quen nhỏ nhỏ, như tưới cây, lau nhà, chăm sóc ngôi nhà của mình. Tuýp đánh răng lúc nào cũng phải mập mạp nguyên vẹn không bị móp. Sàn nhà phải được gạt nước khô. Toilet là nơi Loan chăm chút nhất cho cả căn nhà. Có rất nhiều thứ, nhưng để nhẹ bớt đầu Loan đã nới lỏng cho bản thân rất nhiều. Chỉ giữ lại những điều cỏn con đó, chỉ khi có những điều nhỏ nhoi đó, Loan mới yêu chính mình và mọi thứ hơn. Cứ mỗi khi có điều kiện hơn về tâm trí và sức khỏe, Loan lại add thêm nhưng quy tắc bé bé đó cuộc sống của mình. Nhưng cũng thật xung đột, Loan lại rất ghét những quy tắc, ngột ngạt với chính nó. Quy định nhà trường, Loan yêu nó. Quy tắc xã giao, Loan ghét nó.</div>
+    <br>
+    <div class="line">Thế giới nàyyyy ... thật khó sống</div>
+    <br>
+    <div class="line">Quả thật rất khó sống</div>
+    <br>
+    <div class="line">Ở bên một người không hiểu mình rất ngột ngạt. Có rất nhiều lúc, những lời nói hay hành động của Loan qua miệng của mẹ, hay của Quyên, đều trở thành một thứ gì đó rất gì khác. Thế giới này cũng vậy, mà sao Loan lại quan tâm nó làm gì chứ, cho dù Loan phân giải cỡ nào, cũng khó khiến một người không hiểu mình hiểu được mình</div>
+    <br>
+    <div class="line">Khùng rồi, cũng chưa chắc, có khi là chính Loan không hiểu mọi người thì đúng hơn. Có lúc lại cảm thấy như mình rất dễ hiểu một ai đó, có lúc lại thấy Thế giới này thật khó hiểu. Đúng, khó hiểu mới là đúng.</div>
+    <br>
+    <div class="line">Có Mon là người khiến Loan cảm thấy, Mon rất là hiểu Loan a, Mon cũng mang trong mình dáng vẻ người lớn khác lạ. Ở bên Mon rất thoải mái, lần trước nói Mon không thân. Cũng đúng là không thân thiệt, nhưng lúc đó một phần là Loan đang dỗi. Loan với Mon không có nhiều cuộc gặp mặt, chỉ là gặp nhau rất thoải mái, cũng không hay trò chuyện, nhưng biết về chuyện của nhau lại rất sâu. Lúc đó Loan là một lúc dỗi cả hai người. Quyên khi chia tay, cùng Loan nói chuyện rất nhiều, tối nào cũng trò chuyện, cũng gọi điện cho nhau. Quyên quay lại với người yêu rồi, thì liền biến mất. Rồi lúc chia tay lại xuất hiện. Loan rất hiểu tâm lý yêu đương a, cũng không phải chưa nghe qua bao giờ, mọi người luôn bảo tình yêu rất đẹp mà, trường hợp này xảy ra rất nhiều rồi. Nhưng trong lúc tiêu cực thì vẫn là cho mình tiêu cực thôi. Mon cũng vậy, lúc nào Mon cũng cho Loan cảm giác như bị lợi dụng, lúc Mon cần thì sẽ liên lạc đều đặn, còn lại sẽ mất tăm hơi. Lúc đó Loan cùng Mon ở trong bệnh viện mấy ngày, cả tháng cũng qua ở cùng Mon, có hôm cúp học. Đến lúc người yêu Mon xuống rồi, một tin nhắn nào cũng không còn xuất hiện nữa.</div>
+    <br>
+    <div class="line">Có điều rất nhiều mâu thuẫn diễn ra tại đây. Loan rõ ràng rất thích phong cách cần nhau sẽ tìm đến nhau và kết nối lại, những lúc không cần, không nên gượng ép. Có điều mặt khác lại rơi vào thế như một bên lợi dụng. Ranh giới của mâu thuẫn này cách nhau ở hai chữ 'niềm tin'. Cũng phải xem niềm tin của mình cho tình bạn này là bao nhiêu, họ có phải người như vậy không. Thế là cũng thoát ra khỏi tiêu cực.</div>
+    <br>
+    <div class="line">Chỉ là những tủi thân vì vẫn tồn đọng ở đó</div>
+    <br>
+    <div class="line">Đôi lúc Loan không phân biệt được đâu là suy nghĩ của chính mình, đâu là suy nghĩ bị ảnh hưởng và tác động từ những thứ bên ngoài, đâu là những suy nghĩ ảnh hưởng do nội tiết tố. Đâu mới là mình, mà quả thật đâu cũng là mình, nhưng cũng phải biết rằng, có những thứ không phải là mình. Một là nhận biết sáng suốt, hai là chối bỏ do lầm tưởng. Để đối diện với nó Loan nghĩ mình cần thêm 30- 40 năm tuổi nữa. Chắc vậy, tại sao phải nhận diện nó cho thật rõ hả, Loan cũng không biết nữa, chỉ là thấy đó là một khía cạnh quan trọng trong cuộc sống của mỗi người. Là một yếu tố rất quan trọng đối với bản thân Loan. Trong cuộc trò chuyện 2 người và trong cuộc trò chuyện 3 người Loan luôn có những luồng suy nghĩ khác biệt nhau. Rõ ràng là trong cuộc trò chuyện 3 người, có những ảnh hưởng khác từ người thứ ba. Để mà nói phân biệt nó là gì, thì bản năng Loan mách bảo cho Loan biết, Loan chưa đủ dày dằn để mà phân biệt nó. Phân biệt sai, sẽ dẫn đến những lầm tưởng sai. Loan lại là người rất hay hoang tưởng. Thôi thì biết nó hiện diện trước cái đã.</div>
+    <br>
+    <div class="line">Loan nghĩ những liên kết trong xã hội này tồn tại rất mạnh liệt và có sức ảnh hướng rất lớn đối với nhau. Phải, suy nghĩ và định kiến khi đủ sự lặp lại sẽ thật sự tác động đến một cá nhân và khiến nó trở thành sự thật</div>
+    <br>
+    <div class="line">Quả thật khó sống</div>
+    <br>
+    <div class="line">Chỗ nào đau đầu quá thì mình bỏ qua. Có điều chỉ khi vượt qua ngưỡng, mới đến được một ngưỡng cao hơn. Nhưng tại sao cần đến ngưỡng cao hơn. Loan chưa cần trả lời. Từ đó giờ cứ tới ngưỡng Loan sẽ bảo toàn, học tập cũng vậy, cuộc sống cũng vậy. Vượt ngưỡng đó sẽ đau đầu, hoặc đau bụng, đau dạ dày. Lúc trước Loan tự trách mình sao cứ gặp bài khó hay đâu đầu là liền bỏ cuộc. Viết nhật ký là khởi đầu đầu tiên của Loan để thay đổi bản thân trong vấn đề đó. Và quả thật nó giúp Loan chịu đựng được lâu hơn trong bài kiểm tra Văn. Bây giờ Loan rất muốn khiến bản thân phải vượt ngưỡng trong toán học, nhưng có điều lâu quá rồi. Sau hồi luyện thi thì Loan cũng ám ảnh nó. Nhưng bây giờ ngành học này cần tốt tốt một chút môn Toán. Đầu óc Loan coi như đã lâu không vận động gì mấy trong học tập rồi. Giờ học cái gì cũng bắt đầu lâu hơn. Chưa kể cũng đã bước qua cái tuổi 20. Nhiều vấn đề tuổi tác cũng xuất hiện. Haha. Không sao, không sao</div>
+    <br>
+    <div class="line">Loan đã lâu lắc lâu lơ rồi không viết nhật ký, nhìn vào sổ, con số ngày tháng luôn cách nhau một khoảng rất xa, cuốn sổ ghi chép lại đời sống Loan cũng đã lâu không đụng</div>
+    <br>
+    <div class="line">Mớ này xem như sự trở lại của Loan vậy</div>
+    <br>
+    <div class="line">Lần trước khủng hoảng, Loan cố ghi ra nhiều nhất có thể để giải tõa, có điều nó phụ thuộc nhiều yếu tố quá, không phải cứ ép mình ghi là sẽ ghi được</div>
+    <br>
+    <div class="line">Nay không biết sao Duy lại cho Loan nhiều động lực để ngồi cả buổi trời mà ghi ghi ra một nùi vậy được, Loan cũng chẳng biết mình đã nói gì nữa, nó cũng quá dài để Loan có thể check. Mà ban đầu Loan đã dặn mình không được check rồi, check lại là mai mốt sẽ overthinking, ghi tới đâu quên tới đó đi, haha.</div>
+    <br>
+    <div class="line">Thiệt là sảng khoái</div>
+    <br>
+    <div class="line">Hôm qua trên lớp Loan lại đụng mặt bạn nam tán Loan hồi lúc, cả hai xếp chung một lớp, mà học đến buổi thứ mấy rồi Loan mới biết. Đụng mặt là lơ nhau, Loan áy náy, áy náy. Ai biểu ghost người ta. Lỗi không chỉ có một, chính là thấy bản thân cư xử quá tệ. Hành xử như một đứa con nít, cứ trốn tránh mãi. Bây giờ thật không biết đối mặt ra sao. Thấy bản thân bị lơ, trong lòng lại tổn thương, Loan thật muốn đến bắt chuyện, phải, Loan sẽ bắt chuyện, chứ không cứ đau đáu trong người.</div>
+    <br>
+    <div class="line">Trước đó Loan ngủ từ 7h tối đến 1h sáng. Sau đó thì thức để 7h đi học luôn, mọi khi Loan ở lại trường để chiều đi học luôn, vì chỉ cách nhau 2 tiếng. Hôm đó buồn ngủ quá nên về nhà ngủ. Giữa một ngày tốn 8k đỗ xe. Loan chọn đổi 4k thành 16k đi grab và 3k đi bus cộng với đi bộ. Mà vì lâu không đi bus, cũng quên mất tuyến đường, lên nhầm chuyến, nó chở Loan đến trạm cuối và thả Loan xuống. Loan ngồi ở trạm đợi thêm 20p tới tuyến tiếp theo, mai là cuối tuần, tha hồ chay lỳ. Tới phút cuối, Loan thấy chuyến D4 nhoi đầu ra, Loan nhìn nó, nó nhìn Loan, Loan cứ tưởng trong phạm vi sân đó nó chỉ chuẩn bị thôi, nên chôn chân tại chỗ đợi nó tới đón. Kết quả nó lạnh lùng ra khỏi khu vực và đi về hướng ngược lại. Hình như nó biết Loan đợi nó dừng lại một lúc bên kia đường. Con người Loan dễ sống, rất lười đối diện với một vài thứ. Loan chưa hiểu gì, cứ ngỡ lát nữa nó quay lại, thì thấy số trên bảng đã nhảy về lại 20 min, tức là, bẹp. Haha, ngồi đợi chuyến tiếp theo vậy, 20p. Lúc đó có 2 người trò chuyện bên cạnh Loan Loan biết họ cũng đợi chuyến D4. Loan lại lười mở giọng trò chuyện, nên chỉ ngồi một cục thôi. Chuyến tiếp theo, Loan không thấy nó nhô ra nữa, chỉ thấy số trên bảng chuyển về --, nghĩa là xe đã tới. Chưa kịp đắn đo, thì chuyến D4 chạy ra và lướt qua trước mắt mọi người. Loan lại phát hiện thêm, những người ngồi cũng Loan trên dãy ghế đó đều là đợi D4. Với tính Duy chắc sẽ la Loan mất. Nhưng Loan vậy đó, Loan rất dễ dãi, Loan chấp nhận hi sinh một vài thứ để giữ riêng Thế giới của mình. Nói vậy thôi, chứ stress, stress, tội lỗi, tội lỗi, tự trách, tự trách. Nhưng biết sao được, chị ngồi cạnh Loan kinh nghiệm đi bus dày dặn cũng không ngờ được mà. Loan có thêm 7 người đồng cảnh ngộ, haizzz. Anh trai đi vào hỏi chú bảo vệ thì biết được, yep, phải vào bên trong bãi đỗ xe mà lên xe. Cuối cùng Loan đi Grab về với giá 30k.</div>
+    <br>
+    <div class="line">Nói thật, chỉ những khi như vậy Loan mới đối diện với bản thân mình. Nói ra thấy bản thân sống thật là giả dối. Vì khi về nhà, Loan chỉ cắm đầu vô mạng xã hội, lướt, lướt, lướt, trốn tránh việc suy nghĩ. Loan thích ở chỗ đông người, nhưng không ai để ý đên mình, thích đến quán cà phê, ra phố đi bộ. Khi đó Loan sẽ giả tạo mà không cầm điện thoại lên. Để nói theo một góc độ khác, ở một môi trường có nhiều người, tiếng đám đông sẽ làm át đi những tiếng ồn xung quanh đầu óc Loan. Việc quan sát mọi người cũng sẽ như một chiếc neo, mà neo Loan lại với hiện thực. Bộ óc của mình sinh đã để suy nghĩ mà, nên khi chỉ có những thứ nhàm chán nó sẽ mau chán. Nên ở những mỗi trường đó cứ như được lướt điện thoại vậy, mình vẫn có tài nguyên để não bộ không nhàm chán. Nhưng cũng có không gian để suy nghĩ vu vơ mà không để nó bay quá xa.</div>
+    <br>
+    <div class="line">Cũng vậy mà Loan phát hiện ra, để đọc được một quyển sách mà không khiến bộ não mình nhàm chán. Thì chỉ cần mình tạo ra nhiều hình ảnh và tưởng tượng khiến nó không thể chán là được. Mặc dù đôi lúc việc tưởng tượng làm mệt đầu óc của mình. Nhưng mình hoàn toàn có thể linh động nhiều loại tưởng tượng khác nhau. Có thể tượng tượng bằng âm thanh, hình ảnh, con người. Lúc tưởng tượng bằng lối này chán rồi thì sẽ đổi lối tưởng tượng khác. Nói thì nói vậy chứ Loan chỉ áp dụng nó trong một giai đoạn, khiến Loan thích thú đọc hết cuốn này đến cuốn khác. Giờ lại chững lại. Nhưng chẳng ai ép mình phải đọc thật nhiều sách cả. Sách cũng như mấy mối quan hệ xung quanh mình, có duyên sẽ gặp, có sự đồng điệu sẽ kết nối được với nhau. Ông bác Haruki Murakumi là người khiến Loan bị ghiền nhất. Không hổ tiếng danh lừng lẩy. Trong đó, không có những câu chuyện buồn thảm sướt mướt, nhưng lại rất đau khổ, có khi cảm nhận nó mà khóc, nhưng lại không lý giải nó được. Cảm giác như mình đồng cảm với tình huống đó nhưng lại không lý giải bằng lời được. </div>
+    <br>
+    <div class="line">Cũng không biết nữa. Nó cũng chỉ là một giai đoạn thôi, giờ Loan lại không cầm được cuồn sách nào quá 20 trang rồi. Nhưng mà có một điểm rất hay, khi Loan gặp những người như Thương lớn, Thương lớn là người rất biết nắm bắt suy nghĩ của mình, không hổ là học sinh chuyên Văn, Thương có thể luyên thuyên rất nhiều suy nghĩ của mình. Loan thích ngồi nghe, Thương thích ngồi nói. Kiểu không cần Loan phải mồi, vì quả thật trong hội thoại Loan rất dễ mất tập trung, rất dễ trôi vào dòng tưởng tượng. Nhiều lần tự trách vì không biết cách tiếp nối câu chuyện. Nên đi cùng Thương rất thoải mái, Thương sẽ không phụ thuộc vào biểu cảm của Loan để có lửa trong câu chuyện. Nên Loan không cần phải dồn năng lượng để mà reaction. Nhờ đó Loan phát hiện ra Loan rất thích cảm giác như thế, ngồi nghe người đối diện kể câu chuyện của họ, còn mình không đánh mất chính mình, tập trung toàn lực mà tưởng tượng trong vị trí của người nói. Giữ cái mood như thế, Loan sẽ tập trung mà đọc được hết quyển sách. Dạo này không gặp Thương, mà có gặp cũng không có cuộc trò chuyện như thế. Đồng thời mood đọc sách của Loan cũng mất tiu. Hệ sinh thái của Loan bây giờ chỉ còn lại Duy, Thương và Thươnggg. Hôm bữa vì trong giây phút dồn nén Loan đã đẩy Thươngg ra, nên với Loan mà nói, bây giờ những quyên sách là người bạn đắc lực. Vậy nên không tập trung đọc được Loan sầu lắm. Nhưng mà trên có có một môn học, thầy không giảng bài theo mô tuýp, cảm giác như không giảng luôn á, thầy nói quá trời nói, nói những thứ thuộc về tư tưởng và suy nghĩ của thầy về mọi thứ. Loan nghe có những lúc không hiểu gì mà vẫn cuốn vào nó. Rơi vào cái mood đó, tự nhiên lúc về Loan lại đắm chìm hết một cuốn sách. Có điều, mặt trái là đọc kiểu này, Loan sẽ không nhớ lại được gì mấy. Không chắc nữa, cảm giác không nhớ chút gì, chỉ nhớ Loan thoáng, thứ đọng lại là cảm giác chứ không phải kiến thức.</div>
+    <br>
+    <div class="line">Không biết nữa.. Thế giới thật là khó sống</div>
+    <br>
+    <div class="line">Mà cũng mood đó Loan lại tiếp sức cho cái mood ngồi luyện thuyên đánh cả sớ dài cho Duy.</div>
+    <br>
+    <div class="line">Kể cả Duy không đọc nó, thì việc Loan được ngồi lại, nhìn lại và chia sẻ, chẹp. Có những lúc đầu óc bí bách, có khi biết viết ra sẽ giải quyết được phần nào. Nhưng không thể nào bắt lại lại suy nghĩ mà viết viết được, nó ồn ào và rối rắm, và video ngắn trên điện thoại là thứ đánh lạc hướng được nó. Nên Loan tin, con người vốn đắm chìm vào những cái lướt nhanh gọn, là vì có quá nhiều thứ trong cuộc sống họ phải đối diện, mxh hội hay là nơi lẩn tránh lý tưởng.</div>
+    <br>
+    <div class="line">Ý tưởng viết thứ nảy lên từ lâu kể từ khi Loan đọc cuốn Khi lỗi thuộc về những vì sao. Lúc tặng sách cho Duy Loan tính tặng Luật Tâm thức cơ. Vì nghĩ những chủ đề trong đó có thể làm Duy thích thú, nó nói về những cái nhìn về bản chất của vũ trụ. Duy thì có vẻ sẽ thích những gì về bản chất của con người, như tâm lý học tội phạm, các kiểu. Loan cũng vậy Loan có hứng thú nhiều đến mấy vấn đề tâm lý. Chỉ là mấy cuốn Loan biết thì Duy cũng đọc rồi. Nên tính kiếm Luật tâm thức mà không có. Xong Loan vận đại trò vũ trụ mách bảo, bóc cho Duy được cuốn Bật đèn, ngẫu nhiên thôi. Nghe bảo nó là cuốn đầu tay của Fususu nên chắc sẽ không thu hút lắm. Tặng Duy rồi Loan mới về tải thử đọc, nó cho đọc free nửa đầu cuốn thôi. Ngoài việc giọng văn hơi hướng truyện thiếu nhi, thì những thứ khác Loan rất thích. Nó tích hợp luôn self-help. Nên sẽ có đoạn sến sến, nhưng mà những bí quyết trong đó, rất hợp với phong cách của Loan, Loan ủng hộ lý tưởng sống của nó. Hy zọng Duy sẽ thích. Loan chưa đọc nửa sau nữa.</div>
+    <br>
+    <div class="line">Tự nhiên Loan tưởng tượng nếu Loan gửi thư này cho Duy có khi nào Duy gửi ChatGPT tóm tắt không ha. Vì nó dài quá, huhu. Nhưng mà cũng đâu cần đọc trong một lần, cứ để dần dần rồi đọc hết. Loan định viết tay ra một cuốn sổ rồi bla bla rất nhiều cơ. Nhưng theo mood mọi thứ, nó không phù hợp để viết vào sổ để tặng Duy.</div>
+    <br>
+    <div class="line">Dạo này Loan rất muốn tặng Duy một món quà, quà chia tay. Nhưng sợ nó chiếm mất không gian hành lý của Duy, cuối cùng vẫn không biết tặng gì. Loan hối hận vì mấy món quà trước đó rồi, muốn đòi Duy trả lại ghê. Nó hơi chiếm diện tích</div>
+    <br>
+    <div class="line">Loan mua tai nghe để tặng Duy, nghĩ sao cũng lại không dám tặng, giờ thì Loan dùng luôn rồi</div>
+    <br>
+    <div class="line">Có thể tặng lại không, rồi mình sẽ có tai nghe đôi</div>
+    <br>
+    <div class="line">Không biết nữa... không biết nữa</div>
+    <br>
+    <div class="line">Bây giờ thì làm sao để gửi cho Duy đây</div>
+    <br>
+    <div class="line">Bài tarot nói Có</div>
+    <br>
+    <div class="line">Có những thứ mà ông bà mình sẽ cố ngăn cản mình á</div>
+    <br>
+    <div class="line">Trước đây nghỉ chơi với Quyên Loan viết một sơ rất dài</div>
+    <br>
+    <div class="line">Trùng hợp lúc đó Quyên lại off mất, nghĩ nghĩ Loan thu hồi</div>
+    <br>
+    <div class="line">Một lúc sau nhắn lại, Loan nghĩ nghĩ lại gửi</div>
+    <br>
+    <div class="line">Quyên lại off mất</div>
+    <br>
+    <div class="line">Cuối cùng Loan thu hồi</div>
+    <br>
+    <div class="line">Có phải ông trời bảo Loan không nên gửi</div>
+    <br>
+    <div class="line">Vây nên giờ Loan gửi, trong một khoảng thời gian Duy không nhận được thì chính là không nên gửi    </div>
+    <br>
+    <div class="line">Sợ cái j thì không biết, là nó đó</div>
+    <br>
+    <div class="line">Liệu sau này tụi mình có trao đổi thư từ qua lại không ha, nếu là Quyên chắc Quyên sẽ thích kiểu này</div>
+    <br>
+    <div class="line">Loan thì tùy hứng bốc đồng lắm</div>
+    <br>
+    <div class="line">Nên không biết nữa</div>
+    <br>
+    <div class="line">Cũng không biết liệu Duy có hồi đáp không</div>
+    <br>
+    <div class="line">Sau khi giải tỏa một đống thì Loan không còn trong trạng thái bốc đồng kia nữa</div>
+    <br>
+    <div class="line">Nên giờ mới đắn đo không biết nên gửi không</div>
+    <br>
+    <div class="line">Duy Duy</div>
+    <br>
+    <div class="line">Sẽ có nhiều khía cạnh, hay là nhân cách khác nhau của Loan có thể làm Duy cảm thấy xa lạ. Nếu có thì Duy không phải là người duy nhất. Lúc nào Loan trong thế chủ động cũng khiến đối phương thấy khác xa, lạ lẫm. Nhưng đó đều là Loan, tất thảy đều là Loan chưa từng thay đổi. Cỏ vẻ Quyên là người gặp được nhiều trạng thái nhất của Loan. Loan không biết nữa. Cũng không biết sao nhiều lúc, sự xa lạ này của Loan lại tổn thương mọi người. Loan cứ phải cố gắng mà sống nhất quán trước mặt ai đó. Duy cũng đã thấy sự linh hoạt của Loan. Xét về giới tinh thôi Loan đã rất linh động rồi. Loan cũng k nhớ Loan trong mắt Duy như thế nào nữa. Có đôi lúc Loan không biết đâu mới là mình, nhưng thực chất đâu cũng là Loan. Kể cả những Loan trong những ảnh hưởng khác của mọi người. Trong đám đông Loan giữ im lặng là vậy. Loan sợ mọi người quính giá Loan, 2 mặt giả tạo. Thật đó, bạn cấp 3 của Loan, rõ ràng đẫ chứng kiến Loan bên này đối xử với nhỏ bạn Tomboy một kiểu, một giọng khác, quay qua với người khác liền đổi giọng, đổi nết, họ cũng đều chứng kiến Loan lật mặt khi nói chuyện với bố mẹ. Nhưng vẫn là không thích nghi được với nó, một phần do khoảng thời gian dài xa cách. Nên họ vẫn luôn đinh ninh là Loan thay đổi. Nhưng lúc như vậy Loan rất giằng xé, đúng là con người ai cũng thay đổi, Loan cũng vậy, nhưng Loan vẫn là Loan của mọi người mà. Cùng lắm chỉ là Loan không sao nhớ được bản thân đã là dùng nết nào mà đối xử với từng người thôi.</div>
+    <br>
+    <div class="line">Duy Duy, có thể, khi Loan nhắc nhiều về ba, có thể ở đâu đó có thể làm tổn thương Duy. Loan cũng k biết sao mình lại kể nhiều về những chuyện khi xưa nữa. Ban đầu là Loan đang muốn chia sẻ những thứ mà cảm thấy hai đứa rất chung cảnh. Loan không biết nữa.</div>
+    <br>
+    <div class="line">Bây giờ cũng k biết nên gửi hay không rồi</div>
+    <br>
+    <div class="line">Có thứ gì vượt qua ngưỡng an toàn không</div>
+    <br>
+    <div class="line">Có, hình như là rất nhiều</div>
+    <br>
+    <div class="line">Loan có nên check lại không</div>
+    <br>
+    <div class="line">Loan lại thức nguyên một đêm rồi.</div>
+    <br>
+    <div class="line">Duy Duy, hai đứa mình đều là những đứa năm nhất sống về đêm. Vậy nên có thể sẽ bị rối loạn. Nhưng Loan không hối hận về quảng thời gian đó chút nào, những buổi tối đi đêm, trốn được cái nóng oi bức và tấp tập của Sài Gòn, thật sự rất đỉnh. Loan đẫ cố chỉnh lại giờ ngủ rất nhiều lần rồi. Rất nhiều giai đoạn đã diễn ra. Có giai đoạn kéo dài mấy tuần mỗi ngày Loan chỉ ngủ 4 tiếng thôi. Rồi có giai đoạn Loan như bù đắp lại ngủ 16 tiếng. Loan cứ chính lại giấc thường thì mỗi ngày lại ngủ trễ hơn một chút một chút. Ba lần lặp lại Loan sẽ ngủ 23h 9h dậy, sau đó trễ dần trễ dần, rồi 5h ngủ, chiều dậy, rồi tăng tiếp 9h ngủ chiều tối dậy. Loan mặc cho vậy để nó tự chỉnh lại giờ bình thường luôn, mất 3-4 tháng và những buổi cúp học. Cả những cuộc gọi của ba mẹ nữa. Có rất nhiều giai đoạn, có lúc Loan thấy nặng nề, tự trách cứ, có lúc thấy rất thú vị. Nhất là những đoạn mà thức tới sáng ở Hưng Phú, chụp được buổi bình minh, đón bình minh với Cá Ngừ. Hay những giấc ngủ ngày cũng rất tuyệt, lúc Sài Gòn oi bức, thì giác quan của Loan đã chìm vào giấc ngủ, đến lúc dậy thì mát mẻ hơn, trốn được nắng oi Sài Gòn. Đó là một Loan đã cúp học triền miên mới có thể làm vậy. Ha. Giai đoạn gần đây nhất thì đều đều Loan ngủ 10 tiếng bất kể giờ nào. Máy hôm nay thì nó không theo một mô típ nào cả.</div>
+    <br>
+    <div class="line">Loan cũng bất lực. Chỉ là dạo này Loan thấy, tốt nhất là không đặt kỳ vọng vào bản thân quá nhiều, càng ép bản thân theo khuôn khổ, càng khiến mình tự trách rồi ngày một tệ đi.</div>
+    <br>
+    <div class="line">Duy Duy, liệu có khi nào Duy chê trách con người Loan sống quá buông thả, chill đến hơn mức cần thiết. Lúc nào cũng thư giãn, vô tư</div>
+    <br>
+    <div class="line">Thương bé cũng vậy, có những lúc Thương còn khó chịu về sự vô tư lự và tích cực thái quá của Loan</div>
+    <br>
+    <div class="line">Loan chỉ là ngày một càng buông thả nhiều thứ. Sự buông thả đó đương nhiên mang lại nhiều rắc rối.c</div>
+    <br>
+    <div class="line">Duy Duy, hôm nay là ngày 19.05.25</div>
+    <br>
+    <div class="line">Có vẻ bức thư này không đến tay Duy rồi</div>
+    <br>
+    <div class="line">Hoặc ít ra đợi Duy qua Đức Loan mới gửi</div>
+    <br>
+    <div class="line">Nghĩ nghĩ Loan cũng nghĩ ra cách gửi cho Duy
+    <br>
+    <div class="line">Nay mới thấy ở nhà không có mạng bất tiện cỡ nào <br>
+    <br>
+    <div class="line">Loan đã nhờ ChatGPT lập cái web này</div>
+    <br>
+    <div class="line">Nhân tiện được mày mò code luôn</div>
+    <br>
+    <div class="line">Loan thường nhờ ChatGPT đặt những câu hỏi, để trả lời, để hiểu được mình hơn. Trong đó có câu hỏi đại loại như sứ mệnh của bạn là gì, động lực của bạn đến từ đâu? Loan nghĩ hồi lâu, chiêm nghiệm lại mọi thứ, Loan note cho bản thân động lực là giúp đỡ người khác, làm điều khiến người khác vui. Trước giờ đều là chỉ khi làm quà cho ai đó, Loan mới có thể cắm đầu mấy tiếng đồng hồ liên tục mà không chán. Lúc nào làm gì đó cho bản thân Loan đều lười, nhưng nếu làm cho người khác thì Loan sẽ rát hăng hái. Loàm được việc xong nhất định cũng sẽ rất hạnh phúc. Chỉ có tặng quà cho ai đó Loan mới ngồi một chỗ móc len, chỉ có khi làm quà Loan mới phát huy tài khéo tay của mình. Rồi chọt vô vẽ vời, làm nhạc, giờ là làm cái code này.<br>
+    <br>
+    <div class="line">Chỉ có điều vì lầm tưởng đó. Loan đã tìm kiếm động lực từ bên ngoài, dẫn tới khủng hoảng, rồi sụp đổ. Cuối cùng Loan vẫn chưa có cho mình câu trả lời.</div>
+    <br>
+    <div class="line">Meow</div>
+    <br>
+    <br>
+    <div class="line">
+        Deine Loan</div>
+        lnguyenmaithao255@gmail.com
+    <br>
+
+  </section>
+
+  <!-- ✅ Đặt script ở đây sau toàn bộ HTML -->
+  <script>
+    const correctPassword = "910174";
+
+    const passwordScreen = document.getElementById("password-screen");
+    const letter = document.getElementById("letter");
+    const error = document.getElementById("error");
+
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      if (input === correctPassword) {
+        passwordScreen.style.display = "none";
+        letter.style.display = "block";
+        sessionStorage.setItem("unlocked", "true");
+      } else {
+        error.innerText = "Sai mật khẩu!";
+      }
+    }
+
+    // Nếu thư đã đọc
+    if (sessionStorage.getItem("read")) {
+      document.body.innerHTML = "<h2 style='text-align:center;padding-top:50vh;'>Thư này đã được đọc rồi.</h2>";
+    }
+
+    // Nếu đã mở khóa từ trước
+    if (sessionStorage.getItem("unlocked") && !sessionStorage.getItem("read")) {
+      passwordScreen.style.display = "none";
+      letter.style.display = "block";
+    }
+
+    // Hiện từng dòng khi cuộn
+    window.addEventListener('scroll', () => {
+      const lines = document.querySelectorAll('.line');
+      const scrollPos = window.scrollY + window.innerHeight;
+      lines.forEach(line => {
+        if (line.offsetTop < scrollPos) {
+          line.classList.add('visible');
+        }
+      });
+
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        sessionStorage.setItem("read", "true");
+        setTimeout(() => {
+          document.body.innerHTML = "<h2 style='text-align:center;padding-top:50vh;'>Thư đã biến mất.</h2><br><h3 style='text-align:center;padding-top:50vh;'>lnguyenmaithao255@gmail.com</h3>";
+        }, 5000);
+      }
+    });
+
+    // Chống cuộn ngược
+    let lastScrollTop = 0;
+    window.addEventListener("scroll", function () {
+      const st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st < lastScrollTop) {
+        window.scrollTo(0, lastScrollTop);
+      } else {
+        lastScrollTop = st;
+      }
+    }, false);
+    
+  </script>
+  <script>
+    // Chặn phím Ctrl + A, C, U và F12
+    document.addEventListener("keydown", function (e) {
+      if ((e.ctrlKey || e.metaKey) && ["a", "c", "u"].includes(e.key.toLowerCase())) {
+        e.preventDefault();
+        alert("Tác vụ này bị chặn để bảo vệ nội dung.");
+      }
+      if (e.key === "F12") {
+        e.preventDefault();
+        alert("DevTools đã bị vô hiệu hóa.");
+      }
+    });
+  
+    // Chặn chuột phải
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+      alert("Không thể sử dụng chuột phải ở đây.");
+    });
+  
+    // Ngăn kéo DevTools bằng tổ hợp phím khác (Ctrl+Shift+I, Ctrl+Shift+J)
+    document.addEventListener("keydown", function (e) {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && ["i", "j"].includes(e.key.toLowerCase())) {
+        e.preventDefault();
+        alert("Không thể mở công cụ nhà phát triển.");
+      }
+    });
+  </script>
+  
+</body>
+</html>
